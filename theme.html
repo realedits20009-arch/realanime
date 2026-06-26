@@ -1,1944 +1,1177 @@
-
-<?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE html>
-<html b:css='false' b:defaultwidgetversion='2' b:layoutsready='true' b:responsive='true' b:templateVersion='1.3.0' expr:dir='data:blog.languageDirection' expr:lang='data:blog.locale' xmlns='http://www.w3.org/1999/xhtml' xmlns:b='http://www.google.com/2005/gml/b' xmlns:data='http://www.google.com/2005/gml/data' xmlns:expr='http://www.google.com/2005/gml/expr'>
+<html lang="en" class="scroll-smooth">
 <head>
-<meta content='width=device-width, initial-scale=1, maximum-scale=5' name='viewport'/>
-<meta content='IE=edge' http-equiv='X-UA-Compatible'/>
-<meta content='#1a0a2e' name='theme-color'/>
-<meta content='#1a0a2e' name='msapplication-navbutton-color'/>
-<meta content='#1a0a2e' name='apple-mobile-web-app-status-bar-style'/>
-
-<b:include data='blog' name='all-head-content'/>
-
-<b:if cond='data:blog.pageType == &quot;index&quot;'>
-<title><data:blog.pageTitle/> - Watch Anime Online Free in HD</title>
-<b:else/>
-<title><data:blog.pageName/> | Real Anime</title>
-</b:if>
-
-<meta content='Real Anime - Watch anime online free in HD quality. Stream thousands of anime series and movies with fast servers. No lag, no ads interruption, just pure anime streaming.' name='description'/>
-<meta content='watch anime, anime streaming, free anime online, HD anime, anime series, anime movies, stream anime, Real Anime, anime sub, anime dub' name='keywords'/>
-<meta content='Real Anime' name='author'/>
-
-<!-- Open Graph Meta -->
-<meta content='website' property='og:type'/>
-<meta content='Real Anime' property='og:site_name'/>
-<meta content='summary_large_image' name='twitter:card'/>
-
-<link href='https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&amp;family=Poppins:wght@400;500;600;700;800;900&amp;display=swap' rel='stylesheet'/>
-<link crossorigin='anonymous' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css' rel='stylesheet'/>
-
-<b:skin><![CDATA[
-/*==============================================
-  REAL ANIME v1.3.0 - Blogger Template
-  Glossy Purple Anime Streaming Theme
-  Lightweight | No Particles | No Lag
-==============================================*/
-
-/* ========== CSS VARIABLES ========== */
-:root {
-  --purple-900: #1a0a2e;
-  --purple-800: #2d1b4e;
-  --purple-700: #3d2266;
-  --purple-600: #5b2d8e;
-  --purple-500: #7c3aed;
-  --purple-400: #a78bfa;
-  --purple-300: #c4b5fd;
-  --purple-200: #ddd6fe;
-  --purple-100: #ede9fe;
-
-  --glossy-1: linear-gradient(135deg, rgba(124,58,237,0.9), rgba(139,92,246,0.85));
-  --glossy-2: linear-gradient(135deg, #7c3aed, #a855f7);
-  --glossy-3: linear-gradient(135deg, #6d28d9, #7c3aed, #a855f7);
-  --glossy-card: linear-gradient(145deg, rgba(45,27,78,0.9), rgba(26,10,46,0.95));
-  --glossy-surface: linear-gradient(135deg, rgba(45,27,78,0.7), rgba(30,15,55,0.8));
-
-  --bg-primary: #0d0517;
-  --bg-secondary: #1a0a2e;
-  --bg-card: rgba(35, 20, 60, 0.85);
-  --bg-card-hover: rgba(55, 35, 90, 0.9);
-  --bg-input: rgba(30, 15, 55, 0.9);
-  --bg-surface: rgba(45, 27, 78, 0.6);
-
-  --text-primary: #f3f0ff;
-  --text-secondary: #c4b5fd;
-  --text-muted: #8b7fb0;
-  --text-dim: #5c5280;
-
-  --border-default: rgba(124, 58, 237, 0.2);
-  --border-hover: rgba(124, 58, 237, 0.45);
-  --border-glow: rgba(167, 139, 250, 0.3);
-
-  --accent-pink: #f472b6;
-  --accent-cyan: #22d3ee;
-  --accent-green: #34d399;
-  --accent-amber: #fbbf24;
-  --accent-red: #f87171;
-
-  --shadow-card: 0 4px 24px rgba(0,0,0,0.3);
-  --shadow-card-hover: 0 8px 40px rgba(124,58,237,0.25);
-  --shadow-glow: 0 0 30px rgba(124,58,237,0.3);
-  --shadow-glossy: 0 2px 20px rgba(124,58,237,0.15), inset 0 1px 0 rgba(255,255,255,0.05);
-
-  --radius-sm: 8px;
-  --radius-md: 12px;
-  --radius-lg: 16px;
-  --radius-xl: 20px;
-
-  --font-primary: 'Poppins', 'Inter', sans-serif;
-  --transition-fast: 0.2s ease;
-  --transition-normal: 0.3s ease;
-  --max-width: 1320px;
-}
-
-/* ========== RESET ========== */
-*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
-body {
-  font-family: var(--font-primary);
-  background: var(--bg-primary);
-  color: var(--text-primary);
-  line-height: 1.6;
-  overflow-x: hidden;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-a { color: var(--purple-400); text-decoration: none; transition: color var(--transition-fast); }
-a:hover { color: var(--accent-cyan); }
-img { max-width: 100%; height: auto; display: block; }
-ul, ol { list-style: none; }
-h1, h2, h3, h4, h5, h6 { font-family: var(--font-primary); font-weight: 700; line-height: 1.3; color: var(--text-primary); }
-::selection { background: var(--purple-500); color: white; }
-::-webkit-scrollbar { width: 7px; }
-::-webkit-scrollbar-track { background: var(--bg-primary); }
-::-webkit-scrollbar-thumb { background: var(--purple-600); border-radius: 10px; }
-::-webkit-scrollbar-thumb:hover { background: var(--purple-500); }
-
-.container { max-width: var(--max-width); margin: 0 auto; padding: 0 20px; }
-
-/* ========== HEADER ========== */
-.header-wrapper {
-  position: sticky; top: 0; z-index: 1000;
-  background: rgba(13, 5, 23, 0.92);
-  backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px);
-  border-bottom: 1px solid var(--border-default);
-}
-.header-wrapper.scrolled { border-bottom-color: var(--border-hover); }
-.header-inner {
-  display: flex; align-items: center; justify-content: space-between;
-  padding: 10px 20px; max-width: var(--max-width); margin: 0 auto;
-}
-
-/* LOGO */
-.logo { display: flex; align-items: center; gap: 10px; text-decoration: none; flex-shrink: 0; }
-.logo-icon {
-  width: 42px; height: 42px; background: var(--glossy-2); border-radius: var(--radius-sm);
-  display: flex; align-items: center; justify-content: center;
-  font-size: 16px; color: white; box-shadow: var(--shadow-glossy);
-  position: relative; overflow: hidden;
-}
-.logo-text { display: flex; flex-direction: column; }
-.logo-text .site-name { font-size: 21px; font-weight: 800; color: var(--text-primary); line-height: 1.1; letter-spacing: -0.5px; }
-.logo-text .site-name span { background: var(--glossy-2); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
-.logo-text .site-tagline { font-size: 9px; font-weight: 600; color: var(--text-muted); text-transform: uppercase; letter-spacing: 2.5px; }
-
-/* NAV */
-.nav-menu { display: flex; align-items: center; gap: 2px; }
-.nav-menu a {
-  display: flex; align-items: center; gap: 5px; padding: 8px 13px;
-  font-size: 12.5px; font-weight: 500; color: var(--text-secondary);
-  border-radius: var(--radius-sm); transition: all var(--transition-fast); white-space: nowrap;
-}
-.nav-menu a:hover { color: var(--text-primary); background: rgba(124,58,237,0.1); }
-.nav-menu a.active { color: var(--purple-300); background: rgba(124,58,237,0.18); }
-
-/* HEADER ACTIONS */
-.header-actions { display: flex; align-items: center; gap: 6px; }
-.action-btn {
-  background: rgba(124,58,237,0.1); border: 1px solid var(--border-default); color: var(--text-secondary);
-  padding: 7px 11px; border-radius: var(--radius-sm); cursor: pointer; font-size: 13px;
-  transition: all var(--transition-fast); display: flex; align-items: center;
-}
-.action-btn:hover { border-color: var(--purple-500); color: var(--purple-300); background: rgba(124,58,237,0.18); }
-.mobile-toggle { display: none; }
-
-/* ========== SEARCH OVERLAY ========== */
-.search-overlay {
-  display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%;
-  background: rgba(13, 5, 23, 0.96); backdrop-filter: blur(12px); z-index: 2000;
-  align-items: center; justify-content: center; padding: 20px;
-}
-.search-overlay.active { display: flex; }
-.search-overlay-inner { width: 100%; max-width: 580px; text-align: center; }
-.search-overlay h3 { font-size: 26px; margin-bottom: 20px; color: var(--text-primary); }
-.search-overlay h3 span { background: var(--glossy-2); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
-.search-form-overlay {
-  display: flex; background: var(--bg-card); border: 1.5px solid var(--border-default);
-  border-radius: var(--radius-lg); overflow: hidden;
-}
-.search-form-overlay:focus-within { border-color: var(--purple-500); box-shadow: 0 0 0 3px rgba(124,58,237,0.15); }
-.search-form-overlay input {
-  flex: 1; padding: 15px 18px; background: transparent; border: none;
-  color: var(--text-primary); font-size: 15px; font-family: var(--font-primary); outline: none;
-}
-.search-form-overlay input::placeholder { color: var(--text-dim); }
-.search-form-overlay button { padding: 15px 22px; background: var(--glossy-2); border: none; color: white; font-size: 15px; cursor: pointer; }
-.search-close { position: absolute; top: 24px; right: 24px; background: none; border: none; color: var(--text-muted); font-size: 26px; cursor: pointer; }
-.search-close:hover { color: var(--text-primary); }
-.search-suggestions { margin-top: 18px; text-align: left; }
-.search-suggestions p { font-size: 11px; color: var(--text-dim); margin-bottom: 8px; text-transform: uppercase; letter-spacing: 1.5px; }
-.search-suggestions .tags { display: flex; flex-wrap: wrap; gap: 7px; justify-content: center; }
-.search-suggestions .tags a {
-  padding: 6px 13px; background: var(--bg-card); border: 1px solid var(--border-default);
-  border-radius: 50px; font-size: 12px; color: var(--text-secondary); transition: all var(--transition-fast);
-}
-.search-suggestions .tags a:hover { border-color: var(--purple-500); color: var(--purple-300); background: rgba(124,58,237,0.12); }
-
-/* ========== FEATURED SLIDER ========== */
-.featured-section { margin-bottom: 36px; position: relative; }
-.section-gap-top { margin-top: 28px; }
-.featured-slider {
-  position: relative; border-radius: var(--radius-lg); overflow: hidden;
-  aspect-ratio: 21/8; background: var(--bg-card); border: 1px solid var(--border-default);
-}
-.featured-slide { position: absolute; inset: 0; opacity: 0; transition: opacity 0.7s ease; }
-.featured-slide.active { opacity: 1; }
-.featured-slide .slide-bg { width: 100%; height: 100%; object-fit: cover; filter: brightness(0.35); }
-.featured-slide .slide-overlay {
-  position: absolute; inset: 0;
-  background: linear-gradient(to top, rgba(13,5,23,0.97) 0%, rgba(13,5,23,0.4) 45%, transparent 100%);
-}
-.featured-slide .slide-content { position: absolute; bottom: 28px; left: 28px; right: 140px; z-index: 2; }
-.slide-content .slide-badge {
-  display: inline-flex; align-items: center; gap: 5px; padding: 4px 11px;
-  background: var(--glossy-2); border-radius: 4px; font-size: 10px; font-weight: 700;
-  color: white; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 10px;
-}
-.slide-content h2 { font-size: 24px; font-weight: 800; margin-bottom: 7px; max-width: 580px; line-height: 1.2; }
-.slide-content h2 a { color: white; }
-.slide-content h2 a:hover { color: var(--purple-300); }
-.slide-content p { font-size: 13px; color: var(--text-secondary); max-width: 480px; margin-bottom: 14px; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
-.slide-content .slide-btns { display: flex; gap: 8px; }
-.btn-primary {
-  padding: 9px 22px; background: var(--glossy-2); border-radius: var(--radius-sm);
-  color: white; font-size: 12.5px; font-weight: 600; display: inline-flex; align-items: center; gap: 6px;
-  transition: all var(--transition-fast); border: none; cursor: pointer;
-}
-.btn-primary:hover { box-shadow: var(--shadow-glow); color: white; transform: translateY(-1px); }
-.btn-outline {
-  padding: 9px 22px; background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.2);
-  border-radius: var(--radius-sm); color: white; font-size: 12.5px; font-weight: 600;
-  display: inline-flex; align-items: center; gap: 6px; transition: all var(--transition-fast); cursor: pointer;
-}
-.btn-outline:hover { border-color: var(--purple-400); color: var(--purple-300); }
-.featured-dots { position: absolute; bottom: 18px; right: 18px; display: flex; flex-direction: column; gap: 6px; z-index: 3; }
-.featured-dot {
-  width: 8px; height: 8px; border-radius: 50%; background: rgba(255,255,255,0.25);
-  cursor: pointer; transition: all var(--transition-fast); border: none;
-}
-.featured-dot.active { background: var(--purple-400); width: 24px; border-radius: 4px; }
-
-/* Slider Arrows */
-.slider-arrow {
-  position: absolute; top: 50%; transform: translateY(-50%); z-index: 3;
-  width: 38px; height: 38px; border-radius: 50%;
-  background: rgba(13,5,23,0.7); border: 1px solid var(--border-default);
-  color: white; font-size: 14px; cursor: pointer;
-  display: flex; align-items: center; justify-content: center;
-  transition: all var(--transition-fast);
-}
-.slider-arrow:hover { background: var(--purple-600); border-color: var(--purple-400); }
-.slider-arrow.prev { left: 12px; }
-.slider-arrow.next { right: 12px; }
-
-/* ========== GENRE NAV BAR ========== */
-.genre-nav { padding: 14px 0; position: relative; z-index: 10; border-bottom: 1px solid var(--border-default); }
-.genre-nav-inner {
-  display: flex; align-items: center; gap: 8px; overflow-x: auto; scrollbar-width: none; padding-bottom: 4px;
-}
-.genre-nav-inner::-webkit-scrollbar { display: none; }
-.genre-label {
-  font-size: 11px; font-weight: 700; color: var(--text-muted); text-transform: uppercase;
-  letter-spacing: 1.5px; white-space: nowrap; flex-shrink: 0; margin-right: 4px;
-  display: flex; align-items: center; gap: 5px;
-}
-.genre-chip {
-  display: inline-flex; align-items: center; gap: 5px; padding: 7px 14px;
-  background: var(--bg-card); border: 1px solid var(--border-default);
-  border-radius: 50px; font-size: 12px; font-weight: 500; color: var(--text-secondary);
-  white-space: nowrap; transition: all var(--transition-fast); cursor: pointer; text-decoration: none;
-}
-.genre-chip:hover { background: rgba(124,58,237,0.15); border-color: var(--purple-500); color: var(--purple-300); }
-.genre-chip.active { background: var(--glossy-2); border-color: transparent; color: white; }
-
-/* ========== MAIN LAYOUT ========== */
-.main-wrapper { padding: 32px 0; position: relative; z-index: 1; }
-.main-grid { display: grid; grid-template-columns: 1fr 320px; gap: 32px; }
-
-/* ========== AD PLACEMENT ZONES ========== */
-.ad-zone {
-  background: var(--bg-card); border: 1px dashed var(--border-default);
-  border-radius: var(--radius-md); padding: 12px; text-align: center;
-  margin-bottom: 24px; min-height: 90px; display: flex; align-items: center; justify-content: center;
-}
-.ad-zone-sidebar {
-  background: var(--bg-card); border: 1px dashed var(--border-default);
-  border-radius: var(--radius-md); padding: 12px; text-align: center;
-  margin-bottom: 16px; min-height: 250px; display: flex; align-items: center; justify-content: center;
-}
-
-/* ========== SECTION HEADERS ========== */
-.section-header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 20px; }
-.section-title { display: flex; align-items: center; gap: 10px; font-size: 18px; font-weight: 700; }
-.section-title .title-icon {
-  width: 34px; height: 34px; background: var(--glossy-2); border-radius: var(--radius-sm);
-  display: flex; align-items: center; justify-content: center; font-size: 14px; color: white;
-}
-.section-title .title-line { width: 36px; height: 3px; background: var(--glossy-2); border-radius: 2px; }
-.section-link { font-size: 12.5px; font-weight: 600; color: var(--purple-400); display: flex; align-items: center; gap: 4px; transition: all var(--transition-fast); }
-.section-link:hover { color: var(--accent-cyan); gap: 7px; }
-
-/* ========== ANIME CARD GRID ========== */
-.anime-grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 18px;
-  margin-bottom: 28px;
-}
-
-.anime-card {
-  background: var(--glossy-card);
-  border: 1px solid var(--border-default);
-  border-radius: var(--radius-md);
-  overflow: hidden;
-  transition: all var(--transition-normal);
-  position: relative;
-  display: flex; flex-direction: column;
-}
-
-.anime-card:hover {
-  transform: translateY(-5px);
-  border-color: var(--border-hover);
-  box-shadow: var(--shadow-card-hover);
-  z-index: 2;
-}
-
-/* Card Thumbnail */
-.anime-card-thumb {
-  position: relative;
-  aspect-ratio: 2/3;
-  overflow: hidden;
-  background: var(--bg-secondary);
-}
-
-.anime-card-thumb img {
-  width: 100%; height: 100%; object-fit: cover;
-  transition: transform 0.4s ease;
-}
-
-.anime-card:hover .anime-card-thumb img { transform: scale(1.06); }
-
-/* Badges */
-.anime-card-thumb .badge {
-  position: absolute; padding: 3px 7px; border-radius: 4px;
-  font-size: 9px; font-weight: 700; color: white;
-  text-transform: uppercase; letter-spacing: 0.5px; z-index: 2;
-}
-.badge-hd { top: 8px; left: 8px; background: var(--glossy-2); }
-.badge-sub { top: 8px; left: 8px; background: rgba(34,211,238,0.9); color: #0d0517; }
-.badge-dub { top: 8px; left: 8px; background: rgba(248,113,113,0.9); }
-.badge-ongoing { top: 8px; right: 8px; background: rgba(13,5,23,0.8); backdrop-filter: blur(4px); color: var(--accent-green); }
-.badge-completed { top: 8px; right: 8px; background: rgba(13,5,23,0.8); backdrop-filter: blur(4px); color: var(--purple-400); }
-.badge-movie { bottom: 8px; left: 8px; background: rgba(244,114,182,0.9); }
-.badge-new { top: 8px; left: 8px; background: var(--accent-red); }
-.badge-ep { bottom: 8px; right: 8px; background: rgba(13,5,23,0.8); backdrop-filter: blur(4px); color: var(--accent-amber); font-size: 9px; padding: 2px 6px; }
-
-/* Overlay Actions */
-.anime-card-thumb .overlay-actions {
-  position: absolute; inset: 0;
-  background: rgba(13,5,23,0.65);
-  backdrop-filter: blur(2px);
-  display: flex; align-items: center; justify-content: center; gap: 10px;
-  opacity: 0; transition: opacity var(--transition-normal); z-index: 3;
-}
-.anime-card:hover .overlay-actions { opacity: 1; }
-
-.overlay-btn {
-  width: 38px; height: 38px; border-radius: 50%;
-  display: flex; align-items: center; justify-content: center;
-  font-size: 14px; border: none; cursor: pointer; transition: all var(--transition-fast);
-}
-.overlay-btn.play-btn { background: var(--glossy-2); color: white; box-shadow: 0 4px 16px rgba(124,58,237,0.4); }
-.overlay-btn.detail-btn { background: rgba(255,255,255,0.12); backdrop-filter: blur(4px); color: white; border: 1px solid rgba(255,255,255,0.2); }
-.overlay-btn:hover { transform: scale(1.1); }
-
-/* Card Info */
-.anime-card-info {
-  padding: 10px 12px; flex-grow: 1;
-  display: flex; flex-direction: column; justify-content: space-between;
-}
-.anime-card-info h3 {
-  font-size: 12.5px; font-weight: 600; margin-bottom: 5px; line-height: 1.4;
-  display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden;
-  color: var(--text-primary);
-}
-.anime-card-info h3 a { color: inherit; }
-.anime-card-info h3 a:hover { color: var(--purple-300); }
-
-.anime-card-meta {
-  display: flex; align-items: center; justify-content: space-between;
-  gap: 6px; font-size: 10.5px; color: var(--text-dim); margin-top: auto;
-}
-.anime-card-meta span { display: flex; align-items: center; gap: 3px; }
-.anime-card-meta .genre-tag { color: var(--purple-400); font-weight: 500; }
-
-/* ========== RESPONSIVE GRID ========== */
-@media (max-width: 1200px) {
-  .anime-grid { grid-template-columns: repeat(3, 1fr); gap: 14px; }
-}
-@media (max-width: 900px) {
-  .anime-grid { grid-template-columns: repeat(2, 1fr); gap: 12px; }
-  .main-grid { grid-template-columns: 1fr; }
-}
-@media (max-width: 480px) {
-  .anime-grid { grid-template-columns: 1fr 1fr; gap: 8px; }
-  .anime-card-info { padding: 8px; }
-  .anime-card-info h3 { font-size: 11.5px; }
-  .anime-card-meta { font-size: 9.5px; }
-}
-
-/* ========== POST STYLING (Item Page) ========== */
-.post-outer { margin-bottom: 12px; }
-.post {
-  background: var(--glossy-card); border: 1px solid var(--border-default);
-  border-radius: var(--radius-md); overflow: hidden;
-}
-.post-header { padding: 14px 16px 0; }
-.post-title { font-size: 22px; font-weight: 700; margin-bottom: 8px; line-height: 1.3; }
-.post-title a { color: var(--text-primary); }
-.post-title a:hover { color: var(--purple-300); }
-
-.post-meta {
-  display: flex; align-items: center; gap: 10px; font-size: 12px;
-  color: var(--text-muted); margin-bottom: 12px; flex-wrap: wrap;
-}
-.post-meta span { display: flex; align-items: center; gap: 4px; }
-.post-meta .post-author { color: var(--purple-400); font-weight: 500; }
-
-.post-body {
-  padding: 0 16px 14px; color: var(--text-secondary); font-size: 14px; line-height: 1.7;
-}
-.post-body img { border-radius: var(--radius-sm); margin: 10px 0; max-width: 100%; height: auto; }
-.post-body a { color: var(--purple-400); text-decoration: underline; text-decoration-color: rgba(124,58,237,0.3); text-underline-offset: 3px; }
-.post-body a:hover { color: var(--accent-cyan); }
-
-.post-footer {
-  padding: 10px 16px; border-top: 1px solid var(--border-default);
-  display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 8px;
-}
-.post-labels { display: flex; gap: 4px; flex-wrap: wrap; align-items: center; }
-.post-labels a {
-  padding: 3px 8px; background: rgba(124,58,237,0.12); border: 1px solid rgba(124,58,237,0.2);
-  border-radius: 12px; font-size: 10px; font-weight: 600; color: var(--purple-400);
-}
-.post-labels a:hover { background: rgba(124,58,237,0.22); }
-
-/* Share Buttons */
-.share-buttons { display: flex; gap: 6px; align-items: center; }
-.share-btn {
-  width: 32px; height: 32px; border-radius: 50%; display: flex; align-items: center; justify-content: center;
-  font-size: 12px; border: 1px solid var(--border-default); background: var(--bg-surface);
-  color: var(--text-muted); cursor: pointer; transition: all var(--transition-fast);
-}
-.share-btn:hover { color: white; border-color: transparent; }
-.share-btn.facebook:hover { background: #1877f2; }
-.share-btn.twitter:hover { background: #1da1f2; }
-.share-btn.whatsapp:hover { background: #25d366; }
-.share-btn.telegram:hover { background: #0088cc; }
-.share-btn.copy-link:hover { background: var(--purple-500); }
-
-/* ========== STREAMING / DOWNLOAD BOX ========== */
-.download-box {
-  background: var(--glossy-card); border: 1px solid var(--border-default);
-  border-radius: var(--radius-md); padding: 20px; margin: 16px 0;
-}
-.download-box h4 { font-size: 15px; margin-bottom: 14px; display: flex; align-items: center; gap: 8px; color: var(--accent-cyan); }
-.download-links { display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 8px; }
-.download-link {
-  display: flex; align-items: center; justify-content: center; gap: 8px;
-  padding: 11px 18px; border-radius: var(--radius-sm); color: white;
-  font-size: 12.5px; font-weight: 600; transition: all var(--transition-fast);
-  text-align: center; cursor: pointer; text-decoration: none;
-}
-.download-link:hover { box-shadow: var(--shadow-glow); transform: translateY(-2px); color: white; }
-.download-link.default { background: var(--glossy-2); }
-.download-link.mega { background: linear-gradient(135deg, #d93025, #e8604c); }
-.download-link.drive { background: linear-gradient(135deg, #1a73e8, #4da3ff); }
-.download-link.mediafire { background: linear-gradient(135deg, #0054a6, #2b87d1); }
-
-/* ========== SIDEBAR ========== */
-.sidebar { display: flex; flex-direction: column; gap: 16px; }
-.sidebar-widget {
-  background: var(--glossy-card); border: 1px solid var(--border-default);
-  border-radius: var(--radius-md); overflow: hidden;
-}
-.widget-title {
-  padding: 13px 16px; font-size: 13.5px; font-weight: 700;
-  border-bottom: 1px solid var(--border-default);
-  display: flex; align-items: center; gap: 8px; color: var(--text-primary);
-}
-.widget-title i { color: var(--purple-400); }
-.widget-content { padding: 12px 16px; }
-
-.popular-list { display: flex; flex-direction: column; gap: 8px; }
-.popular-item {
-  display: flex; gap: 10px; align-items: center; padding: 8px;
-  background: var(--bg-surface); border-radius: var(--radius-sm); transition: background var(--transition-fast);
-}
-.popular-item:hover { background: var(--bg-card-hover); }
-.popular-rank {
-  width: 24px; height: 24px; background: var(--glossy-2); border-radius: 6px;
-  display: flex; align-items: center; justify-content: center;
-  font-size: 10px; font-weight: 700; color: white; flex-shrink: 0;
-}
-.popular-rank.gold { background: linear-gradient(135deg, #f59e0b, #fbbf24); }
-.popular-rank.silver { background: linear-gradient(135deg, #94a3b8, #cbd5e1); }
-.popular-rank.bronze { background: linear-gradient(135deg, #d97706, #f59e0b); }
-.popular-thumb { width: 38px; height: 52px; border-radius: 5px; overflow: hidden; flex-shrink: 0; background: var(--bg-surface); }
-.popular-thumb img { width: 100%; height: 100%; object-fit: cover; }
-.popular-info { flex: 1; min-width: 0; }
-.popular-info h4 {
-  font-size: 11.5px; font-weight: 600; margin-bottom: 2px;
-  white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
-}
-.popular-info h4 a { color: var(--text-primary); }
-.popular-info h4 a:hover { color: var(--purple-300); }
-.popular-info span { font-size: 10px; color: var(--text-dim); }
-
-.genre-list { display: flex; flex-wrap: wrap; gap: 5px; }
-.genre-list a {
-  padding: 4px 11px; background: var(--bg-surface); border: 1px solid var(--border-default);
-  border-radius: 50px; font-size: 10.5px; font-weight: 500; color: var(--text-secondary);
-  transition: all var(--transition-fast);
-}
-.genre-list a:hover { background: rgba(124,58,237,0.15); border-color: var(--purple-500); color: var(--purple-300); }
-
-.stats-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
-.stat-card { padding: 10px; background: var(--bg-surface); border-radius: var(--radius-sm); text-align: center; }
-.stat-card .stat-val { font-size: 18px; font-weight: 800; color: var(--text-primary); }
-.stat-card .stat-val span { color: var(--purple-400); }
-.stat-card .stat-txt { font-size: 9px; color: var(--text-dim); text-transform: uppercase; letter-spacing: 0.5px; margin-top: 2px; }
-
-/* ========== TOAST NOTIFICATIONS ========== */
-.toast-container { position: fixed; bottom: 24px; left: 24px; z-index: 9998; display: flex; flex-direction: column; gap: 8px; }
-.toast {
-  padding: 12px 18px; background: var(--bg-card); border: 1px solid var(--border-default);
-  border-radius: var(--radius-sm); color: var(--text-primary); font-size: 13px;
-  display: flex; align-items: center; gap: 8px; box-shadow: var(--shadow-card);
-  transform: translateX(-120%); transition: transform 0.35s ease;
-  max-width: 320px;
-}
-.toast.show { transform: translateX(0); }
-.toast i { font-size: 16px; }
-.toast.success i { color: var(--accent-green); }
-.toast.info i { color: var(--accent-cyan); }
-
-/* ========== PAGINATION ========== */
-.blog-pager { text-align: center; padding: 24px 0; display: flex; align-items: center; justify-content: center; gap: 10px; }
-.blog-pager a {
-  padding: 10px 24px; background: var(--glossy-2); border-radius: var(--radius-sm);
-  color: white; font-weight: 600; font-size: 13px; transition: all var(--transition-fast);
-}
-.blog-pager a:hover { box-shadow: var(--shadow-glow); color: white; transform: translateY(-1px); }
-
-/* ========== FOOTER ========== */
-.footer {
-  background: var(--bg-secondary); border-top: 1px solid var(--border-default);
-  position: relative; z-index: 1; margin-top: 40px;
-}
-.footer-main { padding: 40px 0 28px; }
-.footer-grid { display: grid; grid-template-columns: 1.5fr 1fr 1fr 1fr; gap: 32px; }
-.footer-brand .footer-logo { display: flex; align-items: center; gap: 10px; margin-bottom: 14px; }
-.footer-brand p { font-size: 13px; color: var(--text-dim); line-height: 1.7; margin-bottom: 16px; }
-.footer-social { display: flex; gap: 8px; }
-.footer-social a {
-  width: 36px; height: 36px; background: var(--bg-card); border: 1px solid var(--border-default);
-  border-radius: var(--radius-sm); display: flex; align-items: center; justify-content: center;
-  color: var(--text-dim); font-size: 14px; transition: all var(--transition-fast);
-}
-.footer-social a:hover { background: var(--glossy-2); border-color: transparent; color: white; }
-.footer-column h4 { font-size: 13px; font-weight: 700; margin-bottom: 14px; color: var(--text-primary); text-transform: uppercase; letter-spacing: 1px; }
-.footer-links { display: flex; flex-direction: column; gap: 8px; }
-.footer-links a { font-size: 13px; color: var(--text-dim); display: flex; align-items: center; gap: 6px; }
-.footer-links a:hover { color: var(--purple-400); transform: translateX(3px); }
-.footer-bottom { padding: 16px 0; border-top: 1px solid var(--border-default); }
-.footer-bottom-inner { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 10px; }
-.footer-bottom p { font-size: 12px; color: var(--text-dim); }
-.footer-bottom p span { color: var(--purple-400); font-weight: 600; }
-.footer-bottom-links { display: flex; gap: 16px; }
-.footer-bottom-links a { font-size: 12px; color: var(--text-dim); }
-.footer-bottom-links a:hover { color: var(--purple-400); }
-
-/* ========== BACK TO TOP ========== */
-.back-to-top {
-  position: fixed; bottom: 24px; right: 24px; width: 42px; height: 42px;
-  background: var(--glossy-2); border-radius: 50%; display: flex; align-items: center; justify-content: center;
-  color: white; font-size: 16px; cursor: pointer; z-index: 999; opacity: 0; visibility: hidden;
-  transition: all var(--transition-normal); box-shadow: var(--shadow-glossy); border: none;
-}
-.back-to-top.visible { opacity: 1; visibility: visible; }
-.back-to-top:hover { transform: translateY(-3px); box-shadow: var(--shadow-glow); }
-
-/* ========== BLOGGER OVERRIDES ========== */
-#comments {
-  background: var(--glossy-card); border: 1px solid var(--border-default);
-  border-radius: var(--radius-md); padding: 20px; margin-top: 20px;
-}
-#comments h4 { font-size: 17px; margin-bottom: 14px; color: var(--text-primary); }
-.comment-block { background: var(--bg-surface); border-radius: var(--radius-sm); padding: 12px; margin-bottom: 10px; }
-.widget ul { list-style: none; }
-.widget li { padding: 7px 0; border-bottom: 1px solid var(--border-default); font-size: 13px; }
-.widget li:last-child { border-bottom: none; }
-.widget li a { color: var(--text-secondary); }
-.widget li a:hover { color: var(--purple-400); }
-.list-label-widget-content { display: flex; flex-wrap: wrap; gap: 6px; }
-.list-label-widget-content li { border-bottom: none !important; padding: 0 !important; }
-.list-label-widget-content li a {
-  padding: 5px 12px; background: var(--bg-surface); border: 1px solid var(--border-default);
-  border-radius: 50px; font-size: 11px; font-weight: 500; color: var(--text-secondary);
-  display: inline-block; transition: all var(--transition-fast);
-}
-.list-label-widget-content li a:hover { background: rgba(124,58,237,0.15); border-color: var(--purple-500); color: var(--purple-300); }
-
-/* ========== RESPONSIVE ========== */
-@media (max-width: 1024px) {
-  .main-grid { grid-template-columns: 1fr; }
-  .anime-grid { grid-template-columns: repeat(3, 1fr); }
-  .footer-grid { grid-template-columns: 1fr 1fr; gap: 24px; }
-}
-@media (max-width: 768px) {
-  .nav-menu { display: none; }
-  .nav-menu.active {
-    display: flex; flex-direction: column; position: absolute; top: 100%; left: 0; right: 0;
-    background: rgba(13,5,23,0.98); backdrop-filter: blur(16px);
-    padding: 16px; border-bottom: 1px solid var(--border-default); gap: 2px; z-index: 100;
-  }
-  .nav-menu.active a { padding: 11px 14px; width: 100%; }
-  .mobile-toggle { display: flex; }
-  .anime-grid { grid-template-columns: repeat(2, 1fr); gap: 10px; }
-  .footer-grid { grid-template-columns: 1fr; gap: 20px; }
-  .footer-bottom-inner { flex-direction: column; text-align: center; }
-  .featured-slider { aspect-ratio: 16/9; }
-  .slide-content h2 { font-size: 16px; }
-  .slide-content p { display: none; }
-  .slide-content { right: 90px; bottom: 18px; left: 18px; }
-  .slider-arrow { display: none; }
-}
-@media (max-width: 480px) {
-  .container { padding: 0 12px; }
-  .download-links { grid-template-columns: 1fr; }
-}
-]]></b:skin>
-
-<b:if cond='data:blog.pageType == &quot;item&quot;'>
-<style>.genre-nav,.featured-section{display:none}</style>
-</b:if>
-<b:if cond='data:blog.pageType == &quot;static_page&quot;'>
-<style>.genre-nav,.featured-section{display:none}</style>
-</b:if>
-<b:if cond='data:blog.pageType == &quot;archive&quot;'>
-<style>.featured-section{display:none}</style>
-</b:if>
-
-<!-- ========================================== -->
-<!-- PASTE POPUNDER AD SCRIPT HERE              -->
-<!-- ========================================== -->
-<script src='https://pl29794988.effectivecpmnetwork.com/08/49/23/084923f74a208f7e7f44fa101101db11.js'/>
-
-</head>
-
-<body>
-
-<!-- READING PROGRESS BAR -->
-<div class='reading-progress' id='readingProgress'/>
-
-<!-- TOAST CONTAINER -->
-<div class='toast-container' id='toastContainer'/>
-
-<!-- ========== HEADER ========== -->
-<header class='header-wrapper' id='headerWrapper'>
-<div class='header-inner'>
-  <a class='logo' expr:href='data:blog.homepageUrl'>
-    <div class='logo-icon'><i class='fas fa-play'/></div>
-    <div class='logo-text'>
-      <span class='site-name'>Real <span>Anime</span></span>
-      <span class='site-tagline'>Stream Anime Online</span>
-    </div>
-  </a>
-
-  <nav class='nav-menu' id='navMenu'>
-    <a expr:href='data:blog.homepageUrl'><i class='fas fa-home'/> Home</a>
-    <a href='/search/label/Anime'><i class='fas fa-film'/> Anime</a>
-    <a href='/search/label/movie'><i class='fas fa-video'/> Movies</a>
-    <a href='/search/label/ongoing'><i class='fas fa-circle' style='font-size:6px;color:var(--accent-green)'/> Ongoing</a>
-    <a href='/search/label/completed'><i class='fas fa-check-circle'/> Completed</a>
-  </nav>
-
-  <div class='header-actions'>
-    <button class='action-btn' id='searchToggle' title='Search (Ctrl+K)' type='button'><i class='fas fa-search'/></button>
-    <button class='action-btn mobile-toggle' id='mobileToggle' type='button'><i class='fas fa-bars' id='menuIcon'/></button>
-  </div>
-</div>
-</header>
-
-<!-- ========== SEARCH OVERLAY ========== -->
-<div class='search-overlay' id='searchOverlay'>
-  <button class='search-close' id='searchClose' type='button'><i class='fas fa-times'/></button>
-  <div class='search-overlay-inner'>
-    <h3>Search <span>Anime</span></h3>
-    <form action='/search' class='search-form-overlay' method='get'>
-      <input autocomplete='off' name='q' placeholder='Type anime name here...' type='text'/>
-      <button type='submit'><i class='fas fa-search'/></button>
-    </form>
-    <div class='search-suggestions'>
-      <p>Popular Searches</p>
-      <div class='tags'>
-        <a href='/search/label/Action'>Action</a>
-        <a href='/search/label/Romance'>Romance</a>
-        <a href='/search/label/Isekai'>Isekai</a>
-        <a href='/search/label/Shonen'>Shonen</a>
-        <a href='/search/label/Fantasy'>Fantasy</a>
-        <a href='/search/label/movie'>Movies</a>
-      </div>
-    </div>
-  </div>
-</div>
-
-<!-- ========== FEATURED SLIDER (HOME ONLY) ========== -->
-<b:if cond='data:blog.pageType == &quot;index&quot;'>
-<b:if cond='data:blog.url == data:blog.homepageUrl'>
-<section class='featured-section'>
-<div class='container'>
-  <div class='featured-slider' id='featuredSlider'>
-
-    <!-- Slide 1 -->
-    <div class='featured-slide active'>
-      <img alt='Tokyo Revengers season 3' class='slide-bg' src='https://m.media-amazon.com/images/M/MV5BOGM3OThkZTItMTQzYS00NjlhLThlYTItY2Q2ZTQ3ZjczNjU5XkEyXkFqcGc@._V1_.jpg'/>
-      <div class='slide-overlay'/>
-      <div class='slide-content'>
-        <span class='slide-badge'><i class='fas fa-fire'/> Trending</span>
-        <h2><a href='https://realanimeee.blogspot.com/2026/06/tokyo-revengers-season-3.html'>Tokyo Revengers season 3</a></h2>
-        <p>With a future where Toman has been destroyed by Mikey&#39;s twisted ideas and Takemichi returning to the past, he decides to become stronger in order to stop Kisaki&#39;s plans. On one side, a mysterious gang from Yokohama known as Tenjiku begins to overthrow all the Toman divisions, deciding to destroy all the gangs in Japan, becoming the most powerful and unique.
-
-Kisaki has been planning something for his purposes against Toman, now that he is banned.</p>
-        <div class='slide-btns'>
-          <a class='btn-primary' href='https://realanimeee.blogspot.com/p/tokyo-revengers-season-3.html'><i class='fas fa-play'/> Watch Now</a>
-          <a class='btn-outline' href='https://realanimeee.blogspot.com/p/tokyo-revengers-season-3.html'><i class='fas fa-info-circle'/> Details</a>
-        </div>
-      </div>
-    </div>
-
-    <!-- Slide 2 -->
-    <div class='featured-slide'>
-      <img alt='Chainsaw Man season 1' class='slide-bg' src='https://a.storyblok.com/f/178900/1920x1080/665ca495dc/chainsaw-man.PNG/m/1200x0/filters:quality(95)format(webp)'/>
-      <div class='slide-overlay'/>
-      <div class='slide-content'>
-        <span class='slide-badge'><i class='fas fa-star'/> Dark</span>
-        <h2><a href='https://realanimeee.blogspot.com/2026/06/chainsaw-man.html'>Chainsaw Man season 1</a></h2>
-        <p>Denji is a teenage boy living with a Chainsaw Devil named Pochita. Due to the debt his father left behind, he has been living a rock-bottom life while repaying his debt by harvesting devil corpses with Pochita.
-
-One day, Denji is betrayed and killed. As his consciousness fades, he makes a contract with Pochita and gets revived as &quot;Chainsaw Man&quot; &#8212; a man with a devil&#39;s heart.</p>
-        <div class='slide-btns'>
-          <a class='btn-primary' href='https://realanimeee.blogspot.com/p/chainsaw-man-season-1.html'><i class='fas fa-play'/> Watch Now</a>
-          <a class='btn-outline' href='https://realanimeee.blogspot.com/p/chainsaw-man-season-1.html'><i class='fas fa-info-circle'/> Details</a>
-        </div>
-      </div>
-    </div>
-
-    <!-- Slide 3 -->
-    <div class='featured-slide'>
-      <img alt='Solo leveling season 2' class='slide-bg' src='https://imgsrv.crunchyroll.com/cdn-cgi/image/fit=cover,format=auto,quality=85,width=1920/keyart/GDKHZEJ0K-backdrop_wide'/>
-      <div class='slide-overlay'/>
-      <div class='slide-content'>
-        <span class='slide-badge'><i class='fas fa-bolt'/> Popular</span>
-        <h2><a href='https://realanimeee.blogspot.com/2026/05/solo-leveling-season-2.html'> Solo leveling season 2</a></h2>
-        <p>Jinwoo arrives via Shadow Exchange to save the surviving hunters from the Ant King. After a brutal battle, he extracts the creature&#39;s shadow, naming it Beru</p>
-        <div class='slide-btns'>
-          <a class='btn-primary' href='https://realanimeee.blogspot.com/p/solo-leveling-season-2.html'><i class='fas fa-play'/> Watch Now</a>
-          <a class='btn-outline' href='https://realanimeee.blogspot.com/p/solo-leveling-season-2.html'><i class='fas fa-info-circle'/> Details</a>
-        </div>
-      </div>
-    </div>
-
-    <!-- Slide 4 -->
-    <div class='featured-slide'>
-      <img alt='Attack on titan season 1' class='slide-bg' src='https://m.media-amazon.com/images/S/pv-target-images/b897c98711c6257554739c1ff1a1ee48c380817b2a1a91fc55d894e2b5e09770.jpg'/>
-      <div class='slide-overlay'/>
-      <div class='slide-content'>
-        <span class='slide-badge'><i class='fas fa-crown'/> Masterpiece</span>
-        <h2><a href='https://realanimeee.blogspot.com/2026/04/attack-on-titan-season-1_20.html'>Attack on titan season 1</a></h2>
-        <p>Many years ago, the last remnants of humanity were forced to retreat behind the towering walls of a fortified city to escape the massive, man-eating Titans that roamed the land outside their fortress. Only the heroic members of the Scouting Legion dared to stray beyond the safety of the walls &#8211; but even those brave warriors seldom returned alive. Those within the city clung to the illusion of a peaceful existence until the day that dream was shattered, and their slim chance at survival was reduced to one horrifying choice: kill &#8211; or be devoured!</p>
-        <div class='slide-btns'>
-          <a class='btn-primary' href='https://realanimeee.blogspot.com/p/body-margin0-padding0-background0b0b0b.html'><i class='fas fa-play'/> Watch Now</a>
-          <a class='btn-outline' href='https://realanimeee.blogspot.com/p/body-margin0-padding0-background0b0b0b.html'><i class='fas fa-info-circle'/> Details</a>
-        </div>
-      </div>
-    </div>
-
-    <!-- Slide 5 -->
-    <div class='featured-slide'>
-      <img alt='daemons of the shadow realm season 1' class='slide-bg' src='https://imgsrv.crunchyroll.com/cdn-cgi/image/fit=cover,format=auto,quality=85,width=1920/keyart/GT00371630-backdrop_wide'/>
-      <div class='slide-overlay'/>
-      <div class='slide-content'>
-        <span class='slide-badge'><i class='fas fa-bolt'/> New Season</span>
-        <h2><a href='https://realanimeee.blogspot.com/2026/04/deamon-of-shadow-realm.html'>daemons of the shadow realm season 1</a></h2>
-        <p>        In a world where shadows hold ancient powers and demons lurk between dimensions, a young warrior named Kaito discovers he carries the bloodline of the Shadow Sovereign &#8212; a legendary demon lord who once ruled the realm of darkness. When rifts between the human world and the Shadow Realm begin to tear open, unleashing horrors upon the living, Kaito must embrace his demonic heritage to protect those he loves. But with each use of his shadow powers, the darkness creeps closer to consuming his humanity. Alongside a secretive order of shadow hunters and a mysterious demoness with her own agenda, Kaito embarks on a perilous journey through the Shadow Realm to seal the rifts before both worlds collide. The line between savior and destroyer grows ever thinner as the demon within awakens.</p>
-        <div class='slide-btns'>
-          <a class='btn-primary' href='https://realanimeee.blogspot.com/p/daemons-of-shadow-realm.html'><i class='fas fa-play'/> Watch Now</a>
-          <a class='btn-outline' href='https://realanimeee.blogspot.com/p/daemons-of-shadow-realm.html'><i class='fas fa-info-circle'/> Details</a>
-        </div>
-      </div>
-    </div>
-
-    <!-- Slide 6 -->
-    <div class='featured-slide'>
-      <img alt='wind breaker season 2' class='slide-bg' src='https://static.toiimg.com/thumb/resizemode-4,width-1280,height-720,msid-120116542/120116542.jpg'/>
-      <div class='slide-overlay'/>
-      <div class='slide-content'>
-        <span class='slide-badge'><i class='fas fa-skull'/> popular</span>
-        <h2><a href='https://realanimeee.blogspot.com/2026/06/wind-breaker-season-2.html'>wind breaker season 2</a></h2>
-        <p>Welcome back to Furin High School, an institution infamous for its population of brawny brutes who solve every conflict with a show of strength. Some of the students even formed a group, Bofurin, which protects the town. Haruka Sakura, a first-year student who moved in from out of town, is only interested in one thing: fighting his way to the top!</p>
-        <div class='slide-btns'>
-          <a class='btn-primary' href='https://realanimeee.blogspot.com/p/wind-breaker-season-2.html'><i class='fas fa-play'/> Watch Now</a>
-          <a class='btn-outline' href='https://realanimeee.blogspot.com/p/wind-breaker-season-2.html'><i class='fas fa-info-circle'/> Details</a>
-        </div>
-      </div>
-    </div>
-
-    <!-- Slide 7 -->
-    <div class='featured-slide'>
-      <img alt='Demon Slayer: Kimetsu No Yaiba The Movie: Infinity Castle' class='slide-bg' src='https://www.japankuru.com/gld-kanri/data/uploads/2024/12/Screenshot-2024-12-11-at-13.08.25-scaled.jpeg'/>
-      <div class='slide-overlay'/>
-      <div class='slide-content'>
-        <span class='slide-badge'><i class='fas fa-heart'/> Fan Favorite</span>
-        <h2><a href='https://realanimeee.blogspot.com/2026/04/demon-slayer-kimetsu-no-yaiba-movie.html'>Demon Slayer: Kimetsu No Yaiba The Movie: Infinity Castle</a></h2>
-        <p>The Demon Slayer Corps are drawn into the Infinity Castle, where Tanjiro and the Hashira face terrifying Upper Rank demons in a desperate battle as the final war against Muzan Kibutsuji begins.</p>
-        <div class='slide-btns'>
-          <a class='btn-primary' href='https://realanimeee.blogspot.com/p/demon-slayer-kimetsu-no-yaiba-movie.html'><i class='fas fa-play'/> Watch Now</a>
-          <a class='btn-outline' href='https://realanimeee.blogspot.com/p/demon-slayer-kimetsu-no-yaiba-movie.html'><i class='fas fa-info-circle'/> Details</a>
-        </div>
-      </div>
-    </div>
-
-    <!-- Slide 8 -->
-    <div class='featured-slide'>
-      <img alt='blue lock season 2' class='slide-bg' src='https://a.storyblok.com/f/178900/1200x675/d1870f9afa/blue-lock-s2-base-assets-16x9.jpg/m/1200x0/filters:quality(95)format(webp)'/>
-      <div class='slide-overlay'/>
-      <div class='slide-content'>
-        <span class='slide-badge'><i class='fas fa-trophy'/> legendary</span>
-        <h2><a href='https://realanimeee.blogspot.com/2026/05/blue-lock-season-2.html'>blue lock season 2</a></h2>
-        <p>Japan&#39;s desire for World Cup glory leads the Japanese Football Association to launch a new rigorous training program to find the national team&#39;s next striker. Three hundred high school players are pitted against each other for the position, but only one will come out on top. Who among them will be the striker to usher in a new era of Japanese soccer?</p>
-        <div class='slide-btns'>
-          <a class='btn-primary' href='https://realanimeee.blogspot.com/p/blue-lock-season-2.html'><i class='fas fa-play'/> Watch Now</a>
-          <a class='btn-outline' href='https://realanimeee.blogspot.com/p/blue-lock-season-2.html'><i class='fas fa-info-circle'/> Details</a>
-        </div>
-      </div>
-    </div>
-
-    <!-- Slider Navigation -->
-    <button class='slider-arrow prev' id='sliderPrev' type='button'><i class='fas fa-chevron-left'/></button>
-    <button class='slider-arrow next' id='sliderNext' type='button'><i class='fas fa-chevron-right'/></button>
-    <div class='featured-dots'>
-      <button class='featured-dot active' data-slide='0' type='button'/>
-      <button class='featured-dot' data-slide='1' type='button'/>
-      <button class='featured-dot' data-slide='2' type='button'/>
-      <button class='featured-dot' data-slide='3' type='button'/>
-      <button class='featured-dot' data-slide='4' type='button'/>
-      <button class='featured-dot' data-slide='5' type='button'/>
-      <button class='featured-dot' data-slide='6' type='button'/>
-      <button class='featured-dot' data-slide='7' type='button'/>
-    </div>
-  </div>
-</div>
-</section>
-</b:if>
-</b:if>
-
-<!-- ========== GENRE NAV (HOME + LABEL PAGES) ========== -->
-<b:if cond='data:blog.pageType == &quot;index&quot;'>
-<section class='genre-nav'>
-<div class='container'>
-  <div class='genre-nav-inner'>
-    <span class='genre-label'><i class='fas fa-filter'/> Genres</span>
-    <a class='genre-chip active' href='/'>All</a>
-    <a class='genre-chip' href='/search/label/Action'>Action</a>
-    <a class='genre-chip' href='/search/label/Adventure'>Adventure</a>
-    <a class='genre-chip' href='/search/label/comedy'>Comedy</a>
-    <a class='genre-chip' href='/search/label/drama'>Drama</a>
-    <a class='genre-chip' href='/search/label/fantasy'>Fantasy</a>
-    <a class='genre-chip' href='/search/label/Horror'>Horror</a>
-    <a class='genre-chip' href='/search/label/Isekai'>Isekai</a>
-    <a class='genre-chip' href='/search/label/zombie'>Zombie</a>
-    <a class='genre-chip' href='/search/label/romance'>Romance</a>
-    <a class='genre-chip' href='/search/label/SCI-FI'>Sci-Fi</a>
-    <a class='genre-chip' href='/search/label/Shonen'>Shonen</a>
-    <a class='genre-chip' href='/search/label/survival'>Survival</a>
-    <a class='genre-chip' href='/search/label/shojo'>Shojo</a>
-    <a class='genre-chip' href='/search/label/slice of life'>Slice of Life</a>
-    <a class='genre-chip' href='/search/label/thriller'>Thriller</a>
-    <a class='genre-chip' href='/search/label/sports'>Sports</a>
-    <a class='genre-chip' href='/search/label/Mystery'>Mystery</a>
-    <a class='genre-chip' href='/search/label/Supernatural'>Supernatural</a>
-    <a class='genre-chip' href='/search/label/Psychological'>Psychological</a>
-    <a class='genre-chip' href='/search/label/Martial Arts'>Martial Arts</a>
-    <a class='genre-chip' href='/search/label/Music'>Music</a>
-    <a class='genre-chip' href='/search/label/school'>School</a>
-    <a class='genre-chip' href='/search/label/movie'>Movies</a>
-    <a class='genre-chip' href='/search/label/ongoing'>Ongoing</a>
-    <a class='genre-chip' href='/search/label/completed'>Completed</a>
-  </div>
-</div>
-</section>
-</b:if>
-
-<!-- ========== MAIN CONTENT ========== -->
-<main class='main-wrapper'>
-<div class='container'>
-  <div class='main-grid'>
-
-    <div class='content-area'>
-      
-      <!-- ========================================== -->
-      <!-- PASTE HYPERLINK AD HERE (Top Content)     -->
-      <!-- ========================================== -->
-      <div class='ad-zone'>
- <a href='https://www.effectivecpmnetwork.com/uycr8k4ge?key=0b53159b01b47859edfaca5975b43319' rel='noopener' style='color:var(--purple-300);font-weight:600;font-size:14px;' target='_blank'> <i class='fas fa-external-link-alt'/> Visit Our Sponsor 
-        </a> 
-      </div>
-
-      <!-- BREADCRUMB (Item Pages) -->
-      <b:if cond='data:blog.pageType == &quot;item&quot;'>
-      <div style='padding:12px 0;font-size:12px;color:var(--text-dim);'>
-        <a expr:href='data:blog.homepageUrl' style='color:var(--text-muted);'>Home</a>
-        <span style='margin:0 6px;'>&#8250;</span>
-        <span style='color:var(--purple-400);font-weight:500;'><data:blog.pageName/></span>
-      </div>
-      </b:if>
-
-      <!-- BLOG WIDGET -->
-      <b:section class='main-section' id='main' name='Main' showaddelement='yes'>
-        <b:widget id='Blog1' locked='true' title='Blog Posts' type='Blog' version='2' visible='true'>
-          <b:widget-settings>
-            <b:widget-setting name='showDateHeader'>false</b:widget-setting>
-            <b:widget-setting name='commentLabel'/>
-            <b:widget-setting name='style.textcolor'>#ffffff</b:widget-setting>
-            <b:widget-setting name='showShareButtons'>true</b:widget-setting>
-            <b:widget-setting name='authorLabel'>Real Anime</b:widget-setting>
-            <b:widget-setting name='showCommentLink'>false</b:widget-setting>
-            <b:widget-setting name='style.urlcolor'>#ffffff</b:widget-setting>
-            <b:widget-setting name='showAuthor'>false</b:widget-setting>
-            <b:widget-setting name='style.linkcolor'>#ffffff</b:widget-setting>
-            <b:widget-setting name='style.unittype'>TextAndImage</b:widget-setting>
-            <b:widget-setting name='style.bgcolor'>#ffffff</b:widget-setting>
-            <b:widget-setting name='timestampLabel'/>
-            <b:widget-setting name='reactionsLabel'/>
-            <b:widget-setting name='showAuthorProfile'>true</b:widget-setting>
-            <b:widget-setting name='style.layout'>1x1</b:widget-setting>
-            <b:widget-setting name='showLabels'>true</b:widget-setting>
-            <b:widget-setting name='showLocation'>false</b:widget-setting>
-            <b:widget-setting name='postLabelsLabel'/>
-            <b:widget-setting name='showTimestamp'>false</b:widget-setting>
-            <b:widget-setting name='postsPerAd'>1</b:widget-setting>
-            <b:widget-setting name='showBacklinks'>false</b:widget-setting>
-            <b:widget-setting name='style.bordercolor'>#ffffff</b:widget-setting>
-            <b:widget-setting name='showInlineAds'>false</b:widget-setting>
-            <b:widget-setting name='showReactions'>false</b:widget-setting>
-          </b:widget-settings>
-          <b:includable id='main'>
-            <b:if cond='data:blog.pageType == &quot;index&quot;'>
-              <div class='section-header'>
-                <h2 class='section-title'>
-                  <span class='title-icon'><i class='fas fa-fire'/></span>
-                  <b:if cond='data:blog.url == data:blog.homepageUrl'>
-                    Latest Anime
-                  <b:else/>
-                    <data:blog.pageName/>
-                  </b:if>
-                  <span class='title-line'/>
-                </h2>
-                <a class='section-link' href='/search'>View All <i class='fas fa-arrow-right'/></a>
-              </div>
-              <div class='anime-grid'>
-                <b:loop values='data:posts' var='post'>
-                  <b:include data='post' name='animeCard'/>
-                </b:loop>
-              </div>
-            </b:if>
-
-            <b:if cond='data:blog.pageType == &quot;item&quot;'>
-              <b:loop values='data:posts' var='post'>
-                <b:include data='post' name='postDetail'/>
-              </b:loop>
-            </b:if>
-
-            <b:if cond='data:blog.pageType == &quot;static_page&quot;'>
-              <b:loop values='data:posts' var='post'>
-                <b:include data='post' name='postDetail'/>
-              </b:loop>
-            </b:if>
-
-            <b:if cond='data:blog.pageType == &quot;archive&quot;'>
-              <div class='section-header'>
-                <h2 class='section-title'>
-                  <span class='title-icon'><i class='fas fa-archive'/></span>
-                  Archive
-                  <span class='title-line'/>
-                </h2>
-              </div>
-              <div class='anime-grid'>
-                <b:loop values='data:posts' var='post'>
-                  <b:include data='post' name='animeCard'/>
-                </b:loop>
-              </div>
-            </b:if>
-
-            <div class='blog-pager'>
-              <b:if cond='data:newerPageUrl'>
-                <a class='blog-pager-newer-link' expr:href='data:newerPageUrl'><i class='fas fa-arrow-left'/> Newer</a>
-              </b:if>
-              <b:if cond='data:olderPageUrl'>
-                <a class='blog-pager-older-link' expr:href='data:olderPageUrl'>Older <i class='fas fa-arrow-right'/></a>
-              </b:if>
-            </div>
-          </b:includable>
-          <b:includable id='aboutPostAuthor'>
-  <div class='author-name'>
-    <a class='g-profile' expr:href='data:post.author.profileUrl' rel='author' title='author profile'>
-      <span><data:post.author.name/></span>
-    </a>
-  </div>
-  <div><span class='author-desc'><data:post.author.aboutMe/></span></div>
-</b:includable>
-          <b:includable id='addComments'>
-  <a expr:href='data:post.commentsUrl' expr:onclick='data:post.commentsUrlOnclick'>
-    <b:message name='messages.postAComment'/>
-  </a>
-</b:includable>
-          <b:includable id='animeCard'>
-            <article class='anime-card'>
-              <div class='anime-card-thumb'>
-                <b:if cond='data:post.featuredImage'>
-                  <img expr:alt='data:post.title' expr:src='data:post.featuredImage'/>
-                <b:else/>
-                  <img alt='Anime Cover' src='https://via.placeholder.com/400x600/1a0a2e/7c3aed?text=Real+Anime'/>
-                </b:if>
-                <span class='badge badge-hd'>HD</span>
-                <b:if cond='data:post.labels'>
-                  <b:loop values='data:post.labels' var='label'>
-                    <b:if cond='data:label.name == &quot;Ongoing&quot;'>
-                      <span class='badge badge-ongoing'><i class='fas fa-circle' style='font-size:5px;margin-right:3px;'/> Airing</span>
-                    </b:if>
-                    <b:if cond='data:label.name == &quot;Completed&quot;'>
-                      <span class='badge badge-completed'><i class='fas fa-check' style='font-size:7px;margin-right:2px;'/> Done</span>
-                    </b:if>
-                    <b:if cond='data:label.name == &quot;movie&quot;'>
-                      <span class='badge badge-movie'>Movie</span>
-                    </b:if>
-                    <b:if cond='data:label.name == &quot;Dubbed&quot;'>
-                      <span class='badge badge-dub'>DUB</span>
-                    </b:if>
-                  </b:loop>
-                </b:if>
-                <div class='overlay-actions'>
-                  <a class='overlay-btn play-btn' expr:href='data:post.url' title='Watch Now'><i class='fas fa-play'/></a>
-                  <a class='overlay-btn detail-btn' expr:href='data:post.url' title='Details'><i class='fas fa-info'/></a>
-                </div>
-              </div>
-              <div class='anime-card-info'>
-                <h3><a expr:href='data:post.url'><data:post.title/></a></h3>
-                <div class='anime-card-meta'>
-                  <span><i class='fas fa-calendar-alt'/> <data:post.date/></span>
-                  <b:if cond='data:post.labels'>
-                    <b:loop index='i' values='data:post.labels' var='label'>
-                      <b:if cond='data:i == 0'>
-                        <a class='genre-tag' expr:href='data:label.url'><data:label.name/></a>
-                      </b:if>
-                    </b:loop>
-                  </b:if>
-                </div>
-              </div>
-            </article>
-          </b:includable>
-          <b:includable id='backlinkDeleteIcon'/>
-          <b:includable id='backlinks'/>
-          <b:includable id='blogThisShare'/>
-          <b:includable id='bylineByName' var='byline'>
-  <b:switch var='data:byline.name'>
-  <b:case value='share'/>
-    <b:include cond='data:post.shareUrl' name='postShareButtons'/>
-  <b:case value='comments'/>
-    <b:include cond='data:post.allowComments' name='postCommentsLink'/>
-  <b:case value='location'/>
-    <b:include cond='data:post.location' name='postLocation'/>
-  <b:case value='timestamp'/>
-    <b:include cond='not data:view.isPage' name='postTimestamp'/>
-  <b:case value='author'/>
-    <b:include name='postAuthor'/>
-  <b:case value='labels'/>
-    <b:include cond='data:post.labels' name='postLabels'/>
-  <b:case value='icons'/>
-    <b:include cond='data:post.emailPostUrl' name='emailPostIcon'/>
-  </b:switch>
-</b:includable>
-          <b:includable id='bylineRegion' var='regionItems'>
-  <b:loop values='data:regionItems' var='byline'>
-    <b:include data='byline' name='bylineByName'/>
-  </b:loop>
-</b:includable>
-          <b:includable id='comment-form' var='post'/>
-          <b:includable id='commentAuthorAvatar'>
-  <div class='avatar-image-container'>
-    <img class='author-avatar' expr:src='data:comment.authorAvatarSrc' height='35' width='35'/>
-  </div>
-</b:includable>
-          <b:includable id='commentDeleteIcon'/>
-          <b:includable id='commentForm' var='post'>
-  <div class='comment-form'>
-    <a name='comment-form'/>
-    <h4 id='comment-post-message'><data:messages.postAComment/></h4>
-    <b:include data='post' name='commentFormIframeSrc'/>
-    <iframe allowtransparency='allowtransparency' class='blogger-iframe-colorize blogger-comment-from-post' frameborder='0' height='210' id='comment-editor' name='comment-editor' src='' width='100%'/>
-  </div>
-</b:includable>
-          <b:includable id='commentFormIframeSrc' var='post'>
-  <a expr:href='data:post.commentFormIframeSrc' id='comment-editor-src'/>
-</b:includable>
-          <b:includable id='commentItem' var='comment'>
-  <div class='comment' expr:id='&quot;c&quot; + data:comment.id'>
-    <b:include cond='data:blog.enabledCommentProfileImages' name='commentAuthorAvatar'/>
-    <div class='comment-block'>
-      <div class='comment-author'>
-        <b:if cond='data:comment.authorUrl'>
-          <b:message name='messages.authorSaidWithLink'>
-            <b:param expr:value='data:comment.author' name='authorName'/>
-            <b:param expr:value='data:comment.authorUrl' name='authorUrl'/>
-          </b:message>
-        <b:else/>
-          <b:message name='messages.authorSaid'>
-            <b:param expr:value='data:comment.author' name='authorName'/>
-          </b:message>
-        </b:if>
-      </div>
-      <div class='comment-body'>
-        <b:if cond='data:comment.isDeleted'><b:class name='deleted'/></b:if>
-        <data:comment.body/>
-      </div>
-      <div class='comment-footer'>
-        <span class='comment-timestamp'>
-          <a expr:href='data:comment.url' title='comment permalink'>
-            <data:comment.timestamp/>
-          </a>
-          <b:include data='comment' name='commentDeleteIcon'/>
-        </span>
-      </div>
-    </div>
-  </div>
-</b:includable>
-          <b:includable id='commentList' var='comments'>
-  <div id='comments-block'>
-    <b:loop values='data:comments' var='comment'>
-      <b:include data='comment' name='commentItem'/>
-    </b:loop>
-  </div>
-</b:includable>
-          <b:includable id='commentPicker' var='post'>
-  <b:if cond='data:post.showThreadedComments'>
-    <b:include data='post' name='threadedComments'/>
-  <b:else/>
-    <b:include data='post' name='comments'/>
-  </b:if>
-</b:includable>
-          <b:includable id='comments' var='post'>
-            <section class='comments' id='comments'>
-              <b:if cond='data:post.allowComments'>
-                <h4>Comments</h4>
-                <b:if cond='data:post.numComments == 0'>
-                  <p style='color:var(--text-dim);'>Be the first to comment on this anime.</p>
-                <b:else/>
-                  <b:loop values='data:post.comments' var='comment'>
-                    <div class='comment-block'>
-                      <dt expr:id='data:comment.anchorName'>
-                        <b:if cond='data:comment.authorUrl'>
-                          <a expr:href='data:comment.authorUrl' rel='nofollow'><data:comment.author/></a>
-                        <b:else/>
-                          <data:comment.author/>
-                        </b:if>
-                        <span style='font-size:11px;color:var(--text-dim);margin-left:8px;'><data:comment.date/></span>
-                      </dt>
-                      <dd expr:id='data:comment.anchorName + &quot;-body&quot;'><p><data:comment.body/></p></dd>
-                    </div>
-                  </b:loop>
-                </b:if>
-                <b:if cond='data:post.embedCommentForm'>
-                  <b:include data='post' name='comment-form'/>
-                <b:else/>
-                  <b:if cond='data:post.allowNewComments'>
-                    <a expr:href='data:post.addCommentUrl' expr:onclick='data:post.addCommentOnclick'>Post a Comment</a>
-                  </b:if>
-                </b:if>
-              </b:if>
-            </section>
-          </b:includable>
-          <b:includable id='commentsLink'>
-  <a class='comment-link' expr:href='data:post.commentsUrl' expr:onclick='data:post.commentsUrlOnclick'>
-    <b:if cond='data:post.numberOfComments &gt; 0'>
-      <b:message name='messages.numberOfComments'>
-        <b:param expr:value='data:post.numberOfComments' name='numComments'/>
-      </b:message>
-    <b:else/>
-      <data:messages.postAComment/>
-    </b:if>
-  </a>
-</b:includable>
-          <b:includable id='commentsLinkIframe'/>
-          <b:includable id='commentsTitle'>
-  <h3 class='title'><data:messages.comments/></h3>
-</b:includable>
-          <b:includable id='defaultAdUnit'>
-  <div class='inline-ad'>
-    <span>Advertisement</span>
-  </div>
-</b:includable>
-          <b:includable id='emailPostIcon'/>
-          <b:includable id='facebookShare'/>
-          <b:includable id='feedLinks'/>
-          <b:includable id='feedLinksBody'/>
-          <b:includable id='footerBylines'/>
-          <b:includable id='googlePlusShare'/>
-          <b:includable id='headerByline'/>
-          <b:includable id='homePageLink'>
-  <a class='home-link' expr:href='data:blog.homepageUrl'>
-    <data:messages.home/>
-  </a>
-</b:includable>
-          <b:includable id='iframeComments' var='post'/>
-          <b:includable id='inlineAd' var='post'>
-  <div class='inline-ad'>
-    <span>Advertisement</span>
-  </div>
-</b:includable>
-          <b:includable id='linkShare'/>
-          <b:includable id='manageComments'/>
-          <b:includable id='nextPageLink'>
-  <a class='blog-pager-older-link' expr:href='data:olderPageUrl' expr:id='data:widget.instanceId + &quot;_blog-pager-older-link&quot;' expr:title='data:messages.olderPosts'>
-    <data:messages.olderPosts/>
-  </a>
-</b:includable>
-          <b:includable id='nextprev'>
-            <div class='blog-pager'>
-              <b:if cond='data:newerPageUrl'>
-                <a class='blog-pager-newer-link' expr:href='data:newerPageUrl'><i class='fas fa-arrow-left'/> Newer</a>
-              </b:if>
-              <b:if cond='data:olderPageUrl'>
-                <a class='blog-pager-older-link' expr:href='data:olderPageUrl'>Older <i class='fas fa-arrow-right'/></a>
-              </b:if>
-            </div>
-          </b:includable>
-          <b:includable id='otherSharingButton'/>
-          <b:includable id='platformShare'/>
-          <b:includable id='post' var='post'>
-  <div class='post'>
-    <b:include data='post' name='postMeta'/>
-    <b:include data='post' name='postTitle'/>
-    <b:include name='headerByline'/>
-    <b:if cond='data:view.isSingleItem'>
-      <b:include data='post' name='postBody'/>
-    <b:else/>
-      <b:include data='post' name='postBodySnippet'/>
-      <b:include data='post' name='postJumpLink'/>
-    </b:if>
-    <b:include data='post' name='postFooter'/>
-  </div>
-</b:includable>
-          <b:includable id='postAuthor'>
-  <span class='byline post-author vcard'>
-    <span class='post-author-label'><data:byline.label/></span>
-    <span class='fn'>
-      <b:if cond='data:post.author.profileUrl'>
-        <meta expr:content='data:post.author.profileUrl'/>
-        <a class='g-profile' expr:href='data:post.author.profileUrl' rel='author' title='author profile'>
-          <span><data:post.author.name/></span>
-        </a>
-      <b:else/>
-        <span><data:post.author.name/></span>
-      </b:if>
-    </span>
-  </span>
-</b:includable>
-          <b:includable id='postBody' var='post'>
-  <div class='post-body entry-content float-container' expr:id='&quot;post-body-&quot; + data:post.id'>
-    <data:post.body/>
-  </div>
-</b:includable>
-          <b:includable id='postBodySnippet' var='post'>
-  <b:include data='post' name='postBody'/>
-</b:includable>
-          <b:includable id='postCommentsAndAd'>
-            <b:include data='post' name='postDetail'/>
-            <b:if cond='data:blog.pageType == &quot;item&quot;'>
-              <b:if cond='data:post.allowComments'>
-                <div id='comments'><b:include data='post' name='comments'/></div>
-              </b:if>
-            </b:if>
-          </b:includable>
-          <b:includable id='postCommentsLink'>
-  <b:if cond='data:view.isMultipleItems'>
-    <span class='byline post-comment-link container'>
-      <b:include cond='data:post.commentSource != 1' name='commentsLink'/>
-    </span>
-  </b:if>
-</b:includable>
-          <b:includable id='postDetail'>
-            <article class='post-outer'>
-              <div class='post' itemscope='itemscope' itemtype='http://schema.org/BlogPosting'>
-                <div class='post-header'>
-                  <b:if cond='data:blog.pageType != &quot;static_page&quot;'>
-                    <h1 class='post-title' itemprop='name'>
-                      <b:if cond='data:post.link'>
-                        <a expr:href='data:post.link'><data:post.title/></a>
-                      <b:else/>
-                        <b:if cond='data:post.url'>
-                          <b:if cond='data:blog.url != data:post.url'>
-                            <a expr:href='data:post.url'><data:post.title/></a>
-                          <b:else/>
-                            <data:post.title/>
-                          </b:if>
-                        <b:else/>
-                          <data:post.title/>
-                        </b:if>
-                      </b:if>
-                    </h1>
-                  <b:else/>
-                    <h1 class='post-title'><data:post.title/></h1>
-                  </b:if>
-                  <div class='post-meta'>
-                    <span class='post-author'><i class='fas fa-user-edit'/> <data:post.author/></span>
-                    <span><i class='fas fa-calendar-alt'/> <data:post.date/></span>
-                    <b:if cond='data:post.labels'>
-                      <b:loop values='data:post.labels' var='label'>
-                        <span><i class='fas fa-tag'/> <a expr:href='data:label.url'><data:label.name/></a></span>
-                      </b:loop>
-                    </b:if>
-                  </div>
-                </div>
-                <div class='post-body' itemprop='articleBody'>
-                  <data:post.body/>
-                </div>
-
-                <div class='post-footer'>
-                  <b:if cond='data:post.labels'>
-                    <div class='post-labels'>
-                      <i class='fas fa-tags' style='color:var(--text-dim);font-size:12px;'/>
-                      <b:loop values='data:post.labels' var='label'>
-                        <a expr:href='data:label.url' rel='tag'><data:label.name/></a>
-                      </b:loop>
-                    </div>
-                  </b:if>
-                  <div class='share-buttons'>
-                    <a class='share-btn facebook' expr:href='&quot;https://www.facebook.com/sharer/sharer.php?u=&quot; + data:post.url' rel='nofollow' target='_blank' title='Share on Facebook'><i class='fab fa-facebook-f'/></a>
-                    <a class='share-btn twitter' expr:href='&quot;https://twitter.com/intent/tweet?url=&quot; + data:post.url + &quot;&amp;text=&quot; + data:post.title' rel='nofollow' target='_blank' title='Share on Twitter'><i class='fab fa-twitter'/></a>
-                    <a class='share-btn whatsapp' expr:href='&quot;https://api.whatsapp.com/send?text=&quot; + data:post.title + &quot; &quot; + data:post.url' rel='nofollow' target='_blank' title='Share on WhatsApp'><i class='fab fa-whatsapp'/></a>
-                    <a class='share-btn telegram' expr:href='&quot;https://t.me/share/url?url=&quot; + data:post.url + &quot;&amp;text=&quot; + data:post.title' rel='nofollow' target='_blank' title='Share on Telegram'><i class='fab fa-telegram-plane'/></a>
-                    <button class='share-btn copy-link' expr:data-url='data:post.url' title='Copy Link' type='button'><i class='fas fa-link'/></button>
-                  </div>
-                </div>
-              </div>
-            </article>
-          </b:includable>
-          <b:includable id='postFooter' var='post'>
-  <div class='post-footer'>
-    <b:include name='footerBylines'/>
-    <b:include data='post' name='postFooterAuthorProfile'/>
-  </div>
-</b:includable>
-          <b:includable id='postFooterAuthorProfile' var='post'>
-  <b:if cond='data:post.author.aboutMe and data:view.isPost'>
-    <div class='author-profile'>
-      <b:if cond='data:post.author.authorPhoto.url'>
-        <img class='author-image' expr:src='data:post.author.authorPhoto.url' width='50px'/>
-        <div class='author-about'>
-          <b:include data='post' name='aboutPostAuthor'/>
-        </div>
-      <b:else/>
-        <b:include data='post' name='aboutPostAuthor'/>
-      </b:if>
-    </div>
-  </b:if>
-</b:includable>
-          <b:includable id='postHeader' var='post'>
-  <b:include name='headerByline'/>
-</b:includable>
-          <b:includable id='postJumpLink' var='post'>
-  <div class='jump-link flat-button'>
-    <a expr:href='data:post.url fragment &quot;more&quot;' expr:title='data:post.title'>
-      <b:eval expr='data:blog.jumpLinkMessage'/>
-    </a>
-  </div>
-</b:includable>
-          <b:includable id='postLabels'>
-  <span class='byline post-labels'>
-    <span class='byline-label'><data:byline.label/></span>
-    <b:loop index='i' values='data:post.labels' var='label'>
-      <a expr:href='data:label.url' rel='tag'><data:label.name/></a>
-    </b:loop>
-  </span>
-</b:includable>
-          <b:includable id='postLocation'>
-  <span class='byline post-location'>
-    <data:byline.label/>
-    <a expr:href='data:post.location.mapsUrl' target='_blank'><data:post.location.name/></a>
-  </span>
-</b:includable>
-          <b:includable id='postMeta' var='post'>
-  <b:include data='post' name='postMetadataJSON'/>
-</b:includable>
-          <b:includable id='postMetadataJSON'>
-  <script type='application/ld+json'>
-  {
-    &quot;@context&quot;: &quot;http://schema.org&quot;,
-    &quot;@type&quot;: &quot;BlogPosting&quot;,
-    &quot;mainEntityOfPage&quot;: {
-      &quot;@type&quot;: &quot;WebPage&quot;,
-      &quot;@id&quot;: &quot;<data:post.url.canonical/>&quot;
-    },
-    &quot;headline&quot;: &quot;<data:post.title/>&quot;,
-    <b:include data='post' name='postMetadataJSONImage'/>
-    <b:include name='postMetadataJSONPublisher'/>
-    &quot;datePublished&quot;: &quot;<data:post.date.iso8601/>&quot;,
-    &quot;author&quot;: {
-      &quot;@type&quot;: &quot;Person&quot;,
-      &quot;name&quot;: &quot;<data:post.author/>&quot;
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ANIME SEKAI — Discover. Watch. Believe.</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+            display: ['Bebas Neue', 'sans-serif'],
+          }
+        }
+      }
     }
-  }
   </script>
-</b:includable>
-          <b:includable id='postMetadataJSONImage'>
-  &quot;image&quot;: {
-    &quot;@type&quot;: &quot;ImageObject&quot;,
-    <b:if cond='data:post.featuredImage'>
-    &quot;url&quot;: &quot;<data:post.featuredImage/>&quot;,
-    <b:else/>
-    &quot;url&quot;: &quot;https://blogger.googleusercontent.com/img/b/U2hvZWJveA/AVvXsEgfMvYAhAbdHksiBA24JKmb2Tav6K0GviwztID3Cq4VpV96HaJfy0viIu8z1SSw_G9n5FQHZWSRao61M3e58ImahqBtr7LiOUS6m_w59IvDYwjmMcbq3fKW4JSbacqkbxTo8B90dWp0Cese92xfLMPe_tg11g/w1200/&quot;,
-    </b:if>
-    &quot;height&quot;: 630,
-    &quot;width&quot;: 1200
-  },
-</b:includable>
-          <b:includable id='postMetadataJSONPublisher'>
- &quot;publisher&quot;: {
-    &quot;@type&quot;: &quot;Organization&quot;,
-    &quot;name&quot;: &quot;Real Anime&quot;,
-    &quot;logo&quot;: {
-      &quot;@type&quot;: &quot;ImageObject&quot;,
-      &quot;url&quot;: &quot;https://blogger.googleusercontent.com/img/b/U2hvZWJveA/AVvXsEgfMvYAhAbdHksiBA24JKmb2Tav6K0GviwztID3Cq4VpV96HaJfy0viIu8z1SSw_G9n5FQHZWSRao61M3e58ImahqBtr7LiOUS6m_w59IvDYwjmMcbq3fKW4JSbacqkbxTo8B90dWp0Cese92xfLMPe_tg11g/h60/&quot;,
-      &quot;width&quot;: 206,
-      &quot;height&quot;: 60
-    }
-  },
-</b:includable>
-          <b:includable id='postPagination'>
-  <div class='blog-pager container' id='blog-pager'>
-    <b:include cond='data:newerPageUrl' name='previousPageLink'/>
-    <b:include cond='data:olderPageUrl' name='nextPageLink'/>
-    <b:include cond='data:view.url != data:blog.homepageUrl' name='homePageLink'/>
-  </div>
-</b:includable>
-          <b:includable id='postQuickEdit'/>
-          <b:includable id='postReactions'/>
-          <b:includable id='postShareButtons'/>
-          <b:includable id='postTimestamp'>
-  <span class='byline post-timestamp'>
-    <data:byline.label/>
-    <b:if cond='data:post.url'>
-      <meta expr:content='data:post.url.canonical'/>
-      <a class='timestamp-link' expr:href='data:post.url' rel='bookmark' title='permanent link'>
-        <time class='published' expr:datetime='data:post.date.iso8601' expr:title='data:post.date.iso8601'>
-          <data:post.date/>
-        </time>
-      </a>
-    </b:if>
-  </span>
-</b:includable>
-          <b:includable id='postTitle' var='post'>
-  <a expr:name='data:post.id'/>
-  <b:if cond='data:post.title != &quot;&quot;'>
-    <h3 class='post-title entry-title'>
-      <b:if cond='data:post.link'>
-        <a expr:href='data:post.link'><data:post.title/></a>
-      <b:else/>
-        <b:if cond='data:post.url and data:view.url != data:post.url'>
-          <a expr:href='data:post.url'><data:post.title/></a>
-        <b:else/>
-          <data:post.title/>
-        </b:if>
-      </b:if>
-    </h3>
-  </b:if>
-</b:includable>
-          <b:includable id='previousPageLink'>
-  <a class='blog-pager-newer-link' expr:href='data:newerPageUrl' expr:id='data:widget.instanceId + &quot;_blog-pager-newer-link&quot;' expr:title='data:messages.newerPosts'>
-    <data:messages.newerPosts/>
-  </a>
-</b:includable>
-          <b:includable id='sharingButton'/>
-          <b:includable id='sharingButtonContent'/>
-          <b:includable id='sharingButtons'/>
-          <b:includable id='sharingButtonsMenu'/>
-          <b:includable id='sharingPlatformIcon'/>
-          <b:includable id='status-message'/>
-          <b:includable id='threadedCommentForm' var='post'>
-  <div class='comment-form'>
-    <a name='comment-form'/>
-    <h4 id='comment-post-message'><data:messages.postAComment/></h4>
-    <b:include data='post' name='commentFormIframeSrc'/>
-    <iframe allowtransparency='allowtransparency' class='blogger-iframe-colorize blogger-comment-from-post' frameborder='0' height='210' id='comment-editor' name='comment-editor' src='' width='100%'/>
-  </div>
-</b:includable>
-          <b:includable id='threadedCommentJs' var='post'>
-  <script async='async' expr:src='data:post.commentSrc' type='text/javascript'/>
-  <script type='text/javascript'>
-    blogger.widgets.blog.initThreadedComments(
-        <data:post.commentJso/>,
-        <data:post.commentMsgs/>,
-        <data:post.commentConfig/>);
-  </script>
-</b:includable>
-          <b:includable id='threadedComments' var='post'>
-  <section class='comments threaded' expr:data-embed='data:post.embedCommentForm' expr:data-num-comments='data:post.numberOfComments' id='comments'>
-    <a name='comments'/>
-    <b:include name='commentsTitle'/>
-    <div class='comments-content'>
-      <b:if cond='data:post.embedCommentForm'>
-        <b:include data='post' name='threadedCommentJs'/>
-      </b:if>
-      <div id='comment-holder'>
-         <data:post.commentHtml/>
-      </div>
-    </div>
-    <p class='comment-footer'>
-      <b:if cond='data:post.allowNewComments'>
-        <b:include data='post' name='threadedCommentForm'/>
-      <b:else/>
-        <data:post.noNewCommentsText/>
-      </b:if>
-      <b:if cond='data:post.showManageComments'>
-        <b:include data='post' name='manageComments'/>
-      </b:if>
-    </p>
-    <b:if cond='data:showCmtPopup'>
-      <div id='comment-popup'>
-        <iframe allowtransparency='allowtransparency' frameborder='0' id='comment-actions' name='comment-actions' scrolling='no'/>
-      </div>
-    </b:if>
-  </section>
-</b:includable>
-          <b:includable id='tooltipCss'>
   <style>
-    .post-body a.b-tooltip-container { position: relative; display: inline-block; }
-    .post-body a.b-tooltip-container .b-tooltip {
-      display: block !important; position: absolute; top: 100%; left: 50%;
-      transform: translate(-20%, 1px); visibility: hidden; opacity: 0; z-index: 1;
-      transition: opacity 0.2s ease-in-out;
+    /* Scrollbar hide */
+    .scroll-hide { scrollbar-width: none; -ms-overflow-style: none; }
+    .scroll-hide::-webkit-scrollbar { display: none; }
+
+    /* Cherry blossom petal */
+    @keyframes fall {
+      0% { transform: translate(0, -10vh) rotate(0deg) scale(1); opacity: 0; }
+      8% { opacity: 0.8; }
+      85% { opacity: 0.6; }
+      100% { transform: translate(-35vw, 110vh) rotate(540deg) scale(0.5); opacity: 0; }
     }
-    .post-body a.b-tooltip-container .b-tooltip iframe {
-      width: 200px; height: 198px; max-width: none; border: none;
-      border-radius: 20px; box-shadow: 1px 1px 3px 1px rgba(0,0,0,0.2);
+    .petal {
+      position: absolute;
+      border-radius: 50% 0 50% 0;
+      background: radial-gradient(ellipse at 30% 30%, #ffb7c5, #ff85a2);
+      animation: fall linear infinite;
+      pointer-events: none;
+      z-index: 2;
     }
-    @media (hover: hover) {
-      .post-body a.b-tooltip-container:hover .b-tooltip { visibility: visible; opacity: 1; }
+
+    /* Red moon glow pulse */
+    @keyframes moonPulse {
+      0%, 100% { box-shadow: 0 0 80px rgba(220,38,38,0.35), 0 0 160px rgba(220,38,38,0.15), 0 0 300px rgba(220,38,38,0.08); }
+      50% { box-shadow: 0 0 100px rgba(220,38,38,0.45), 0 0 200px rgba(220,38,38,0.2), 0 0 350px rgba(220,38,38,0.1); }
+    }
+    .red-moon {
+      animation: moonPulse 6s ease-in-out infinite;
+    }
+
+    /* Fog drift */
+    @keyframes fogDrift {
+      0% { transform: translateX(-10%); opacity: 0.3; }
+      50% { opacity: 0.5; }
+      100% { transform: translateX(10%); opacity: 0.3; }
+    }
+    .fog {
+      animation: fogDrift 20s ease-in-out infinite alternate;
+    }
+
+    /* Scroll reveal */
+    .reveal {
+      opacity: 0;
+      transform: translateY(40px);
+      transition: opacity 0.9s cubic-bezier(0.25, 1, 0.5, 1), transform 0.9s cubic-bezier(0.25, 1, 0.5, 1);
+    }
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* Stagger children */
+    .reveal.visible .stagger { transition-delay: calc(var(--i) * 80ms); }
+
+    /* Noise overlay */
+    body::after {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.4'/%3E%3C/svg%3E");
+      opacity: 0.025;
+      pointer-events: none;
+      z-index: 9999;
+    }
+
+    /* Search overlay */
+    .search-overlay {
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.3s ease;
+    }
+    .search-overlay.active {
+      opacity: 1;
+      pointer-events: auto;
+    }
+
+    /* Nav transition */
+    #navbar {
+      transition: background-color 0.4s ease, backdrop-filter 0.4s ease;
+    }
+
+    /* Scroll arrow fade */
+    .scroll-arrow {
+      animation: bounce 2s ease-in-out infinite;
+    }
+    @keyframes bounce {
+      0%, 100% { transform: translateY(0); opacity: 0.6; }
+      50% { transform: translateY(10px); opacity: 1; }
+    }
+
+    /* Genre card overlay pattern */
+    .genre-pattern {
+      background-image: radial-gradient(circle at 20% 80%, rgba(255,255,255,0.08) 0%, transparent 50%),
+                        radial-gradient(circle at 80% 20%, rgba(255,255,255,0.05) 0%, transparent 50%);
+    }
+
+    /* Card shine on hover */
+    .card-shine {
+      position: relative;
+      overflow: hidden;
+    }
+    .card-shine::before {
+      content: '';
+      position: absolute;
+      top: -50%;
+      left: -50%;
+      width: 200%;
+      height: 200%;
+      background: linear-gradient(45deg, transparent 40%, rgba(255,255,255,0.05) 50%, transparent 60%);
+      transform: translateX(-100%);
+      transition: transform 0.8s ease;
+      z-index: 5;
+    }
+    .card-shine:hover::before {
+      transform: translateX(100%);
     }
   </style>
-</b:includable>
-        </b:widget>
-      </b:section>
+</head>
 
+<body class="bg-[#0a0a12] text-white font-sans overflow-x-hidden">
+
+  <!-- ===== NAVIGATION ===== -->
+  <nav id="navbar" class="fixed top-0 left-0 right-0 z-50 bg-transparent">
+    <div class="max-w-7xl mx-auto px-6 md:px-12 py-5 flex items-center justify-between">
+      <!-- Logo -->
+      <a href="#" class="flex items-center gap-3 group">
+        <div class="w-9 h-9 rounded-lg bg-rose-600 flex items-center justify-center">
+          <i data-lucide="play" class="w-4 h-4 text-white fill-white"></i>
+        </div>
+        <span class="font-display text-2xl tracking-wider">ANIME SEKAI</span>
+      </a>
+
+      <!-- Desktop Links -->
+      <div class="hidden md:flex items-center gap-8">
+        <a href="#" class="text-sm font-medium text-white border-b border-rose-500 pb-0.5">Home</a>
+        <a href="#" class="text-sm font-medium text-zinc-400 hover:text-white transition-colors">Browse</a>
+        <a href="#" class="text-sm font-medium text-zinc-400 hover:text-white transition-colors">Categories</a>
+        <a href="#" class="text-sm font-medium text-zinc-400 hover:text-white transition-colors">My List</a>
+        <a href="#" class="text-sm font-medium text-zinc-400 hover:text-white transition-colors">News</a>
+      </div>
+
+      <!-- Right Actions -->
+      <div class="flex items-center gap-4">
+        <button id="searchBtn" class="w-10 h-10 rounded-full flex items-center justify-center hover:bg-white/10 transition-colors">
+          <i data-lucide="search" class="w-5 h-5 text-zinc-300"></i>
+        </button>
+        <button class="hidden md:flex w-10 h-10 rounded-full flex items-center justify-center hover:bg-white/10 transition-colors">
+          <i data-lucide="bell" class="w-5 h-5 text-zinc-300"></i>
+        </button>
+        <div class="w-9 h-9 rounded-full bg-gradient-to-br from-rose-500 to-orange-500 flex items-center justify-center text-xs font-bold cursor-pointer">
+          A
+        </div>
+        <!-- Mobile Menu -->
+        <button id="mobileMenuBtn" class="md:hidden w-10 h-10 rounded-full flex items-center justify-center hover:bg-white/10 transition-colors">
+          <i data-lucide="menu" class="w-5 h-5"></i>
+        </button>
+      </div>
     </div>
 
-    <!-- ========== SIDEBAR ========== -->
-    <aside class='sidebar'>
-  
-      <!-- Search Widget -->
-      <div class='sidebar-widget'>
-        <h3 class='widget-title'><i class='fas fa-search'/> Search Anime</h3>
-        <div class='widget-content'>
-          <form action='/search' method='get' style='display:flex;gap:6px;'>
-            <input name='q' placeholder='Search anime...' style='flex:1;padding:9px 12px;background:var(--bg-input);border:1px solid var(--border-default);border-radius:var(--radius-sm);color:var(--text-primary);font-family:var(--font-primary);font-size:13px;outline:none;' type='text'/>
-            <button style='padding:9px 14px;background:var(--glossy-2);border:none;border-radius:var(--radius-sm);color:white;cursor:pointer;' type='submit'><i class='fas fa-search'/></button>
-          </form>
+    <!-- Mobile Menu Panel -->
+    <div id="mobileMenu" class="md:hidden hidden bg-[#0a0a12]/95 backdrop-blur-xl border-t border-white/5 px-6 py-6 space-y-4">
+      <a href="#" class="block text-sm font-medium text-white py-2">Home</a>
+      <a href="#" class="block text-sm font-medium text-zinc-400 py-2">Browse</a>
+      <a href="#" class="block text-sm font-medium text-zinc-400 py-2">Categories</a>
+      <a href="#" class="block text-sm font-medium text-zinc-400 py-2">My List</a>
+      <a href="#" class="block text-sm font-medium text-zinc-400 py-2">News</a>
+    </div>
+  </nav>
+
+  <!-- ===== SEARCH OVERLAY ===== -->
+  <div id="searchOverlay" class="search-overlay fixed inset-0 z-[60] bg-[#0a0a12]/90 backdrop-blur-xl flex items-start justify-center pt-32">
+    <div class="w-full max-w-2xl px-6">
+      <div class="relative">
+        <i data-lucide="search" class="absolute left-5 top-1/2 -translate-y-1/2 w-6 h-6 text-zinc-400"></i>
+        <input id="searchInput" type="text" placeholder="Search anime, genres, studios..."
+          class="w-full bg-white/5 border border-white/10 rounded-2xl py-5 pl-14 pr-14 text-lg text-white placeholder-zinc-500 focus:outline-none focus:border-rose-500/50 focus:ring-2 focus:ring-rose-500/20 transition-all" />
+        <button id="closeSearch" class="absolute right-4 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full flex items-center justify-center hover:bg-white/10 transition-colors">
+          <i data-lucide="x" class="w-5 h-5 text-zinc-400"></i>
+        </button>
+      </div>
+      <div class="mt-6 flex flex-wrap gap-2">
+        <span class="text-xs text-zinc-500 mr-2 py-1">Trending:</span>
+        <a href="#" class="px-3 py-1.5 rounded-full bg-white/5 text-xs text-zinc-300 hover:bg-white/10 transition-colors">Demon Slayer</a>
+        <a href="#" class="px-3 py-1.5 rounded-full bg-white/5 text-xs text-zinc-300 hover:bg-white/10 transition-colors">Jujutsu Kaisen</a>
+        <a href="#" class="px-3 py-1.5 rounded-full bg-white/5 text-xs text-zinc-300 hover:bg-white/10 transition-colors">Solo Leveling</a>
+        <a href="#" class="px-3 py-1.5 rounded-full bg-white/5 text-xs text-zinc-300 hover:bg-white/10 transition-colors">Frieren</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== HERO SECTION ===== -->
+  <section id="hero" class="relative h-screen min-h-[700px] flex items-center justify-center overflow-hidden">
+    <!-- Background gradient -->
+    <div class="absolute inset-0 bg-gradient-to-b from-[#0d0a1a] via-[#0a0a12] to-[#0a0a12]"></div>
+
+    <!-- Red Moon -->
+    <div class="red-moon absolute -top-10 right-[8%] w-[280px] h-[280px] md:w-[380px] md:h-[380px] rounded-full bg-gradient-to-br from-red-500 via-red-700 to-red-950 opacity-90"></div>
+
+    <!-- Moon reflection glow on ground -->
+    <div class="absolute bottom-0 left-1/2 -translate-x-1/2 w-[600px] h-[200px] bg-red-600/5 blur-[100px] rounded-full"></div>
+
+    <!-- Fog layers -->
+    <div class="fog absolute bottom-0 left-0 right-0 h-[40%] bg-gradient-to-t from-[#0a0a12] via-[#0a0a12]/80 to-transparent"></div>
+    <div class="fog absolute bottom-[10%] left-0 right-0 h-[20%] bg-gradient-to-t from-white/[0.02] to-transparent" style="animation-delay: -10s;"></div>
+
+    <!-- Torii Gate SVG -->
+    <svg class="absolute bottom-0 left-1/2 -translate-x-1/2 w-[420px] md:w-[550px] opacity-[0.07]" viewBox="0 0 400 250" fill="none">
+      <rect x="72" y="30" width="14" height="220" fill="white" rx="2"/>
+      <rect x="314" y="30" width="14" height="220" fill="white" rx="2"/>
+      <path d="M25 25 Q200 -15 375 25" stroke="white" stroke-width="16" stroke-linecap="round"/>
+      <rect x="40" y="35" width="320" height="10" rx="3" fill="white"/>
+      <rect x="50" y="70" width="300" height="7" rx="2" fill="white"/>
+      <rect x="64" y="56" width="28" height="16" rx="2" fill="white"/>
+      <rect x="308" y="56" width="28" height="16" rx="2" fill="white"/>
+    </svg>
+
+    <!-- Cherry Blossom Petals (generated by JS) -->
+    <div id="petals-container" class="absolute inset-0 overflow-hidden pointer-events-none"></div>
+
+    <!-- Hero Content -->
+    <div class="relative z-10 text-center px-6 max-w-4xl mx-auto">
+      <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 border border-white/10 backdrop-blur-sm mb-8">
+        <span class="w-2 h-2 rounded-full bg-rose-500 animate-pulse"></span>
+        <span class="text-xs font-medium tracking-wider uppercase text-zinc-300">Now Streaming Season 2025</span>
+      </div>
+
+      <h1 class="font-display text-[80px] md:text-[130px] lg:text-[160px] leading-[0.85] tracking-wider mb-6">
+        <span class="block">ANIME</span>
+        <span class="block bg-gradient-to-r from-rose-400 via-rose-500 to-orange-400 bg-clip-text text-transparent">SEKAI</span>
+      </h1>
+
+      <p class="text-lg md:text-xl text-zinc-400 font-light tracking-[0.3em] uppercase mb-10">
+        Discover &middot; Watch &middot; Believe
+      </p>
+
+      <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+        <a href="#trending" class="group flex items-center gap-3 px-8 py-4 bg-rose-600 hover:bg-rose-500 rounded-full transition-all duration-300 hover:shadow-lg hover:shadow-rose-600/25">
+          <i data-lucide="play" class="w-5 h-5 fill-white"></i>
+          <span class="text-sm font-semibold tracking-wide">Start Watching</span>
+        </a>
+        <a href="#genres" class="flex items-center gap-3 px-8 py-4 bg-white/5 hover:bg-white/10 border border-white/10 hover:border-white/20 rounded-full transition-all duration-300">
+          <i data-lucide="compass" class="w-5 h-5 text-zinc-300"></i>
+          <span class="text-sm font-medium tracking-wide text-zinc-300">Explore</span>
+        </a>
+      </div>
+    </div>
+
+    <!-- Scroll indicator -->
+    <div class="absolute bottom-8 left-1/2 -translate-x-1/2 z-10 scroll-arrow">
+      <i data-lucide="chevron-down" class="w-6 h-6 text-zinc-500"></i>
+    </div>
+
+    <!-- Side decorations -->
+    <div class="absolute left-6 md:left-12 top-1/2 -translate-y-1/2 z-10 hidden lg:flex flex-col items-center gap-4">
+      <div class="w-px h-16 bg-gradient-to-b from-transparent to-white/20"></div>
+      <span class="text-[10px] font-medium tracking-[0.3em] text-zinc-600" style="writing-mode: vertical-rl;">SCROLL</span>
+      <div class="w-px h-16 bg-gradient-to-b from-white/20 to-transparent"></div>
+    </div>
+  </section>
+
+  <!-- ===== TRENDING NOW ===== -->
+  <section id="trending" class="relative py-20 md:py-28">
+    <div class="max-w-7xl mx-auto px-6 md:px-12">
+      <!-- Section Header -->
+      <div class="reveal flex items-end justify-between mb-10">
+        <div>
+          <span class="text-xs font-semibold tracking-[0.25em] uppercase text-rose-500 mb-2 block">What's Hot</span>
+          <h2 class="font-display text-4xl md:text-5xl tracking-wider">Trending Now</h2>
+        </div>
+        <div class="hidden md:flex items-center gap-2">
+          <button onclick="scrollRow('trending-scroll', -1)" class="w-10 h-10 rounded-full border border-white/10 flex items-center justify-center hover:bg-white/10 transition-colors">
+            <i data-lucide="chevron-left" class="w-4 h-4"></i>
+          </button>
+          <button onclick="scrollRow('trending-scroll', 1)" class="w-10 h-10 rounded-full border border-white/10 flex items-center justify-center hover:bg-white/10 transition-colors">
+            <i data-lucide="chevron-right" class="w-4 h-4"></i>
+          </button>
         </div>
       </div>
 
-      <!-- Trending Anime -->
-      <div class='sidebar-widget'>
-        <h3 class='widget-title'><i class='fas fa-fire'/> Trending Now</h3>
-        <div class='widget-content'>
-          <div class='popular-list'>
-            <div class='popular-item'>
-              <span class='popular-rank gold'>1</span>
-              <div class='popular-thumb'><img alt='Anime' src='https://m.media-amazon.com/images/I/91ckLZfJiBL._AC_UF1000,1000_QL80_.jpg'/></div>
-              <div class='popular-info'><h4><a href='https://realanimeee.blogspot.com/p/your-name.html'>your name</a></h4><span>romance &#183; Movie</span></div>
-            </div>
-            <div class='popular-item'>
-              <span class='popular-rank silver'>2</span>
-              <div class='popular-thumb'><img alt='Anime' src='https://a.storyblok.com/f/178900/849x1200/3ea3addb7a/mashle-s2-kv.jpeg/m/filters:quality(95)format(webp)'/></div>
-              <div class='popular-info'><h4><a href='https://realanimeee.blogspot.com/p/mashle-magic-and-muscles-season-2.html'>mashle magic and muscles season 2</a></h4><span>Fantasy &#183; completed</span></div>
-            </div>
-            <div class='popular-item'>
-              <span class='popular-rank bronze'>3</span>
-              <div class='popular-thumb'><img alt='Anime' src='https://m.media-amazon.com/images/I/71kob22rZUL._AC_UF894,1000_QL80_.jpg'/></div>
-              <div class='popular-info'><h4><a href='https://realanimeee.blogspot.com/p/zom-100-bucket-list-of-dead_01319084262.html'>Zom 100: Bucket List of the Dead</a></h4><span>Adventure &#183; completed</span></div>
-            </div>
-            <div class='popular-item'>
-              <span class='popular-rank'>4</span>
-              <div class='popular-thumb'><img alt='Anime' src='https://a.storyblok.com/f/178900/849x1200/e4edca45d6/blue-lock-season-2-teaser-visual.jpg/m/filters:quality(95)format(webp)'/></div>
-              <div class='popular-info'><h4><a href='https://realanimeee.blogspot.com/p/blue-lock-season-2.html'>Blue Lock Season 2</a></h4><span>Sports &#183; Completed</span></div>
-            </div>
-            <div class='popular-item'>
-              <span class='popular-rank'>5</span>
-              <div class='popular-thumb'><img alt='Anime' src='https://m.media-amazon.com/images/M/MV5BNzNlNzU5YmItOWIyMi00MjE3LWEwYTEtZjllNzRhYmRiZDczXkEyXkFqcGc@._V1_.jpg'/></div>
-              <div class='popular-info'><h4><a href='https://realanimeee.blogspot.com/p/daemons-of-shadow-realm.html'>Deamon of the shadow realm</a></h4><span>Action &#183; Ongoing</span></div>
-            </div>
-          </div>
-        </div>
-      </div>
+      <!-- Scroll Row -->
+      <div id="trending-scroll" class="scroll-hide flex gap-5 overflow-x-auto scroll-smooth pb-4">
 
-
-      <!-- Labels Widget (Genres) -->
-      <b:section id='sidebar' name='Sidebar' showaddelement='yes'>
-        <b:widget id='Label1' locked='false' title='Anime Genres' type='Label' version='2' visible='true'>
-          <b:widget-settings>
-            <b:widget-setting name='sorting'>ALPHA</b:widget-setting>
-            <b:widget-setting name='display'>CLOUD</b:widget-setting>
-            <b:widget-setting name='selectedLabelsList'/>
-            <b:widget-setting name='showType'>ALL</b:widget-setting>
-            <b:widget-setting name='showFreqNumbers'>true</b:widget-setting>
-          </b:widget-settings>
-          <b:includable id='main'>
-            <div class='sidebar-widget'>
-              <h3 class='widget-title'><i class='fas fa-tags'/> <data:title/></h3>
-              <div class='widget-content'>
-                <div class='genre-list'>
-                  <b:loop values='data:labels' var='label'>
-                    <a expr:href='data:label.url'><data:label.name/> (<data:label.count/>)</a>
-                  </b:loop>
-                </div>
+        <!-- Card 1 -->
+        <div class="stagger flex-shrink-0 w-[170px] md:w-[190px] group cursor-pointer" style="--i:0">
+          <div class="card-shine relative aspect-[2/3] rounded-xl overflow-hidden mb-3 bg-zinc-900">
+            <img src="https://picsum.photos/seed/demon-slayer-kn/380/570.jpg" alt="Demon Slayer" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" loading="lazy"/>
+            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/10 to-transparent"></div>
+            <div class="absolute top-2.5 right-2.5 flex items-center gap-1 bg-black/50 backdrop-blur-sm rounded-full px-2 py-0.5">
+              <i data-lucide="star" class="w-3 h-3 text-yellow-400 fill-yellow-400"></i>
+              <span class="text-[11px] font-semibold">9.1</span>
+            </div>
+            <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-300">
+              <div class="w-12 h-12 rounded-full bg-white/20 backdrop-blur-md flex items-center justify-center scale-75 group-hover:scale-100 transition-transform duration-300">
+                <i data-lucide="play" class="w-5 h-5 text-white fill-white ml-0.5"></i>
               </div>
             </div>
-          </b:includable>
-          <b:includable id='cloud'>
-  <b:loop values='data:labels' var='label'>
-    <span class='label-size'>
-      <b:if cond='data:label.cssSize == &quot;label-size-1&quot;'><b:class name='label-size-1'/></b:if>
-      <b:if cond='data:label.cssSize == &quot;label-size-2&quot;'><b:class name='label-size-2'/></b:if>
-      <b:if cond='data:label.cssSize == &quot;label-size-3&quot;'><b:class name='label-size-3'/></b:if>
-      <b:if cond='data:label.cssSize == &quot;label-size-4&quot;'><b:class name='label-size-4'/></b:if>
-      <b:if cond='data:label.cssSize == &quot;label-size-5&quot;'><b:class name='label-size-5'/></b:if>
-      <a class='label-name' expr:href='data:label.url'>
-        <data:label.name/>
-        <b:if cond='data:this.showFreqNumbers'>
-          <span class='label-count'><data:label.count/></span>
-        </b:if>
-      </a>
-    </span>
-  </b:loop>
-</b:includable>
-          <b:includable id='content'>
-  <div class='widget-content'>
-    <b:if cond='data:this.display == &quot;list&quot;'><b:class name='list-label-widget-content'/></b:if>
-    <b:if cond='data:this.display == &quot;cloud&quot;'><b:class name='cloud-label-widget-content'/></b:if>
-    <b:include cond='data:this.display == &quot;list&quot;' name='list'/>
-    <b:include cond='data:this.display == &quot;cloud&quot;' name='cloud'/>
-  </div>
-</b:includable>
-          <b:includable id='list'>
-  <ul>
-    <b:loop values='data:labels' var='label'>
-      <li>
-        <a class='label-name' expr:href='data:label.url'>
-          <data:label.name/>
-          <b:if cond='data:this.showFreqNumbers'>
-            <span class='label-count'><data:label.count/></span>
-          </b:if>
-        </a>
-      </li>
-    </b:loop>
-  </ul>
-</b:includable>
-        </b:widget>
-      </b:section>
+          </div>
+          <h3 class="text-sm font-semibold truncate">Demon Slayer</h3>
+          <p class="text-xs text-zinc-500 mt-0.5">Action &bull; 24 Episodes</p>
+        </div>
 
-      <!-- ========================================== -->
-      <!-- PASTE HYPERLINK AD HERE (Sidebar)         -->
-      <!-- ========================================== -->
-            <div class='ad-zone'>
-<script async='async' data-cfasync='false' src='https://pl29796398.effectivecpmnetwork.com/92498d1a87f042db93c9afcddb2a4df6/invoke.js'/>
-<div id='container-92498d1a87f042db93c9afcddb2a4df6'/>
+        <!-- Card 2 -->
+        <div class="stagger flex-shrink-0 w-[170px] md:w-[190px] group cursor-pointer" style="--i:1">
+          <div class="card-shine relative aspect-[2/3] rounded-xl overflow-hidden mb-3 bg-zinc-900">
+            <img src="https://picsum.photos/seed/jujutsu-kaisen-jk/380/570.jpg" alt="Jujutsu Kaisen" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" loading="lazy"/>
+            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/10 to-transparent"></div>
+            <div class="absolute top-2.5 right-2.5 flex items-center gap-1 bg-black/50 backdrop-blur-sm rounded-full px-2 py-0.5">
+              <i data-lucide="star" class="w-3 h-3 text-yellow-400 fill-yellow-400"></i>
+              <span class="text-[11px] font-semibold">8.9</span>
+            </div>
+            <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-300">
+              <div class="w-12 h-12 rounded-full bg-white/20 backdrop-blur-md flex items-center justify-center scale-75 group-hover:scale-100 transition-transform duration-300">
+                <i data-lucide="play" class="w-5 h-5 text-white fill-white ml-0.5"></i>
+              </div>
+            </div>
+          </div>
+          <h3 class="text-sm font-semibold truncate">Jujutsu Kaisen</h3>
+          <p class="text-xs text-zinc-500 mt-0.5">Action &bull; 23 Episodes</p>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="stagger flex-shrink-0 w-[170px] md:w-[190px] group cursor-pointer" style="--i:2">
+          <div class="card-shine relative aspect-[2/3] rounded-xl overflow-hidden mb-3 bg-zinc-900">
+            <img src="https://picsum.photos/seed/frieren-anime/380/570.jpg" alt="Frieren" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" loading="lazy"/>
+            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/10 to-transparent"></div>
+            <div class="absolute top-2.5 left-2.5"><span class="bg-rose-600 text-[10px] font-bold px-2.5 py-1 rounded-full tracking-wider">#1</span></div>
+            <div class="absolute top-2.5 right-2.5 flex items-center gap-1 bg-black/50 backdrop-blur-sm rounded-full px-2 py-0.5">
+              <i data-lucide="star" class="w-3 h-3 text-yellow-400 fill-yellow-400"></i>
+              <span class="text-[11px] font-semibold">9.3</span>
+            </div>
+            <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-300">
+              <div class="w-12 h-12 rounded-full bg-white/20 backdrop-blur-md flex items-center justify-center scale-75 group-hover:scale-100 transition-transform duration-300">
+                <i data-lucide="play" class="w-5 h-5 text-white fill-white ml-0.5"></i>
+              </div>
+            </div>
+          </div>
+          <h3 class="text-sm font-semibold truncate">Frieren</h3>
+          <p class="text-xs text-zinc-500 mt-0.5">Fantasy &bull; 28 Episodes</p>
+        </div>
+
+        <!-- Card 4 -->
+        <div class="stagger flex-shrink-0 w-[170px] md:w-[190px] group cursor-pointer" style="--i:3">
+          <div class="card-shine relative aspect-[2/3] rounded-xl overflow-hidden mb-3 bg-zinc-900">
+            <img src="https://picsum.photos/seed/solo-leveling-sg/380/570.jpg" alt="Solo Leveling" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" loading="lazy"/>
+            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/10 to-transparent"></div>
+            <div class="absolute top-2.5 right-2.5 flex items-center gap-1 bg-black/50 backdrop-blur-sm rounded-full px-2 py-0.5">
+              <i data-lucide="star" class="w-3 h-3 text-yellow-400 fill-yellow-400"></i>
+              <span class="text-[11px] font-semibold">8.8</span>
+            </div>
+            <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-300">
+              <div class="w-12 h-12 rounded-full bg-white/20 backdrop-blur-md flex items-center justify-center scale-75 group-hover:scale-100 transition-transform duration-300">
+                <i data-lucide="play" class="w-5 h-5 text-white fill-white ml-0.5"></i>
+              </div>
+            </div>
+          </div>
+          <h3 class="text-sm font-semibold truncate">Solo Leveling</h3>
+          <p class="text-xs text-zinc-500 mt-0.5">Action &bull; 12 Episodes</p>
+        </div>
+
+        <!-- Card 5 -->
+        <div class="stagger flex-shrink-0 w-[170px] md:w-[190px] group cursor-pointer" style="--i:4">
+          <div class="card-shine relative aspect-[2/3] rounded-xl overflow-hidden mb-3 bg-zinc-900">
+            <img src="https://picsum.photos/seed/one-piece-op/380/570.jpg" alt="One Piece" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" loading="lazy"/>
+            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/10 to-transparent"></div>
+            <div class="absolute top-2.5 right-2.5 flex items-center gap-1 bg-black/50 backdrop-blur-sm rounded-full px-2 py-0.5">
+              <i data-lucide="star" class="w-3 h-3 text-yellow-400 fill-yellow-400"></i>
+              <span class="text-[11px] font-semibold">9.0</span>
+            </div>
+            <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-300">
+              <div class="w-12 h-12 rounded-full bg-white/20 backdrop-blur-md flex items-center justify-center scale-75 group-hover:scale-100 transition-transform duration-300">
+                <i data-lucide="play" class="w-5 h-5 text-white fill-white ml-0.5"></i>
+              </div>
+            </div>
+          </div>
+          <h3 class="text-sm font-semibold truncate">One Piece</h3>
+          <p class="text-xs text-zinc-500 mt-0.5">Adventure &bull; 1100+ Eps</p>
+        </div>
+
+        <!-- Card 6 -->
+        <div class="stagger flex-shrink-0 w-[170px] md:w-[190px] group cursor-pointer" style="--i:5">
+          <div class="card-shine relative aspect-[2/3] rounded-xl overflow-hidden mb-3 bg-zinc-900">
+            <img src="https://picsum.photos/seed/attack-on-titan-aot/380/570.jpg" alt="Attack on Titan" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" loading="lazy"/>
+            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/10 to-transparent"></div>
+            <div class="absolute top-2.5 right-2.5 flex items-center gap-1 bg-black/50 backdrop-blur-sm rounded-full px-2 py-0.5">
+              <i data-lucide="star" class="w-3 h-3 text-yellow-400 fill-yellow-400"></i>
+              <span class="text-[11px] font-semibold">9.2</span>
+            </div>
+            <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-300">
+              <div class="w-12 h-12 rounded-full bg-white/20 backdrop-blur-md flex items-center justify-center scale-75 group-hover:scale-100 transition-transform duration-300">
+                <i data-lucide="play" class="w-5 h-5 text-white fill-white ml-0.5"></i>
+              </div>
+            </div>
+          </div>
+          <h3 class="text-sm font-semibold truncate">Attack on Titan</h3>
+          <p class="text-xs text-zinc-500 mt-0.5">Action &bull; 87 Episodes</p>
+        </div>
+
+        <!-- Card 7 -->
+        <div class="stagger flex-shrink-0 w-[170px] md:w-[190px] group cursor-pointer" style="--i:6">
+          <div class="card-shine relative aspect-[2/3] rounded-xl overflow-hidden mb-3 bg-zinc-900">
+            <img src="https://picsum.photos/seed/chainsaw-man-cm/380/570.jpg" alt="Chainsaw Man" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" loading="lazy"/>
+            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/10 to-transparent"></div>
+            <div class="absolute top-2.5 right-2.5 flex items-center gap-1 bg-black/50 backdrop-blur-sm rounded-full px-2 py-0.5">
+              <i data-lucide="star" class="w-3 h-3 text-yellow-400 fill-yellow-400"></i>
+              <span class="text-[11px] font-semibold">8.7</span>
+            </div>
+            <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-300">
+              <div class="w-12 h-12 rounded-full bg-white/20 backdrop-blur-md flex items-center justify-center scale-75 group-hover:scale-100 transition-transform duration-300">
+                <i data-lucide="play" class="w-5 h-5 text-white fill-white ml-0.5"></i>
+              </div>
+            </div>
+          </div>
+          <h3 class="text-sm font-semibold truncate">Chainsaw Man</h3>
+          <p class="text-xs text-zinc-500 mt-0.5">Action &bull; 12 Episodes</p>
+        </div>
+
+        <!-- Card 8 -->
+        <div class="stagger flex-shrink-0 w-[170px] md:w-[190px] group cursor-pointer" style="--i:7">
+          <div class="card-shine relative aspect-[2/3] rounded-xl overflow-hidden mb-3 bg-zinc-900">
+            <img src="https://picsum.photos/seed/my-hero-academia-mha/380/570.jpg" alt="My Hero Academia" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" loading="lazy"/>
+            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/10 to-transparent"></div>
+            <div class="absolute top-2.5 right-2.5 flex items-center gap-1 bg-black/50 backdrop-blur-sm rounded-full px-2 py-0.5">
+              <i data-lucide="star" class="w-3 h-3 text-yellow-400 fill-yellow-400"></i>
+              <span class="text-[11px] font-semibold">8.5</span>
+            </div>
+            <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-300">
+              <div class="w-12 h-12 rounded-full bg-white/20 backdrop-blur-md flex items-center justify-center scale-75 group-hover:scale-100 transition-transform duration-300">
+                <i data-lucide="play" class="w-5 h-5 text-white fill-white ml-0.5"></i>
+              </div>
+            </div>
+          </div>
+          <h3 class="text-sm font-semibold truncate">My Hero Academia</h3>
+          <p class="text-xs text-zinc-500 mt-0.5">Action &bull; 138 Episodes</p>
+        </div>
+
       </div>
-      
-      <!-- Stats Widget -->
-      <div class='sidebar-widget'>
-        <h3 class='widget-title'><i class='fas fa-chart-bar'/> Site Stats</h3>
-        <div class='widget-content'>
-          <div class='stats-grid'>
-            <div class='stat-card'><div class='stat-val'>50<span>+</span></div><div class='stat-txt'>Anime</div></div>
-            <div class='stat-card'><div class='stat-val'>1K<span>+</span></div><div class='stat-txt'>Episodes</div></div>
-            <div class='stat-card'><div class='stat-val'>20<span>+</span></div><div class='stat-txt'>Genres</div></div>
-            <div class='stat-card'><div class='stat-val'>HD</div><div class='stat-txt'>Quality</div></div>
+    </div>
+  </section>
+
+  <!-- ===== NEW RELEASES ===== -->
+  <section class="relative py-20 md:py-28">
+    <!-- Subtle section divider -->
+    <div class="absolute top-0 left-1/2 -translate-x-1/2 w-[80%] h-px bg-gradient-to-r from-transparent via-white/5 to-transparent"></div>
+
+    <div class="max-w-7xl mx-auto px-6 md:px-12">
+      <div class="reveal flex items-end justify-between mb-10">
+        <div>
+          <span class="text-xs font-semibold tracking-[0.25em] uppercase text-emerald-400 mb-2 block">Fresh Drops</span>
+          <h2 class="font-display text-4xl md:text-5xl tracking-wider">New Releases</h2>
+        </div>
+        <div class="hidden md:flex items-center gap-2">
+          <button onclick="scrollRow('new-scroll', -1)" class="w-10 h-10 rounded-full border border-white/10 flex items-center justify-center hover:bg-white/10 transition-colors">
+            <i data-lucide="chevron-left" class="w-4 h-4"></i>
+          </button>
+          <button onclick="scrollRow('new-scroll', 1)" class="w-10 h-10 rounded-full border border-white/10 flex items-center justify-center hover:bg-white/10 transition-colors">
+            <i data-lucide="chevron-right" class="w-4 h-4"></i>
+          </button>
+        </div>
+      </div>
+
+      <div id="new-scroll" class="scroll-hide flex gap-5 overflow-x-auto scroll-smooth pb-4">
+
+        <!-- New Card 1 -->
+        <div class="stagger flex-shrink-0 w-[170px] md:w-[190px] group cursor-pointer" style="--i:0">
+          <div class="card-shine relative aspect-[2/3] rounded-xl overflow-hidden mb-3 bg-zinc-900">
+            <img src="https://picsum.photos/seed/oshi-no-ko-s2/380/570.jpg" alt="Oshi no Ko" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" loading="lazy"/>
+            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/10 to-transparent"></div>
+            <div class="absolute top-2.5 left-2.5"><span class="bg-emerald-500 text-[10px] font-bold px-2.5 py-1 rounded-full tracking-wider">NEW</span></div>
+            <div class="absolute top-2.5 right-2.5 flex items-center gap-1 bg-black/50 backdrop-blur-sm rounded-full px-2 py-0.5">
+              <i data-lucide="star" class="w-3 h-3 text-yellow-400 fill-yellow-400"></i>
+              <span class="text-[11px] font-semibold">8.6</span>
+            </div>
+            <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-300">
+              <div class="w-12 h-12 rounded-full bg-white/20 backdrop-blur-md flex items-center justify-center scale-75 group-hover:scale-100 transition-transform duration-300">
+                <i data-lucide="play" class="w-5 h-5 text-white fill-white ml-0.5"></i>
+              </div>
+            </div>
+          </div>
+          <h3 class="text-sm font-semibold truncate">Oshi no Ko S2</h3>
+          <p class="text-xs text-zinc-500 mt-0.5">Drama &bull; 13 Episodes</p>
+        </div>
+
+        <!-- New Card 2 -->
+        <div class="stagger flex-shrink-0 w-[170px] md:w-[190px] group cursor-pointer" style="--i:1">
+          <div class="card-shine relative aspect-[2/3] rounded-xl overflow-hidden mb-3 bg-zinc-900">
+            <img src="https://picsum.photos/seed/dandadan-dd/380/570.jpg" alt="Dandadan" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" loading="lazy"/>
+            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/10 to-transparent"></div>
+            <div class="absolute top-2.5 left-2.5"><span class="bg-emerald-500 text-[10px] font-bold px-2.5 py-1 rounded-full tracking-wider">NEW</span></div>
+            <div class="absolute top-2.5 right-2.5 flex items-center gap-1 bg-black/50 backdrop-blur-sm rounded-full px-2 py-0.5">
+              <i data-lucide="star" class="w-3 h-3 text-yellow-400 fill-yellow-400"></i>
+              <span class="text-[11px] font-semibold">8.4</span>
+            </div>
+            <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-300">
+              <div class="w-12 h-12 rounded-full bg-white/20 backdrop-blur-md flex items-center justify-center scale-75 group-hover:scale-100 transition-transform duration-300">
+                <i data-lucide="play" class="w-5 h-5 text-white fill-white ml-0.5"></i>
+              </div>
+            </div>
+          </div>
+          <h3 class="text-sm font-semibold truncate">Dandadan</h3>
+          <p class="text-xs text-zinc-500 mt-0.5">Action &bull; 12 Episodes</p>
+        </div>
+
+        <!-- New Card 3 -->
+        <div class="stagger flex-shrink-0 w-[170px] md:w-[190px] group cursor-pointer" style="--i:2">
+          <div class="card-shine relative aspect-[2/3] rounded-xl overflow-hidden mb-3 bg-zinc-900">
+            <img src="https://picsum.photos/seed/kaiju-no8-k8/380/570.jpg" alt="Kaiju No. 8" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" loading="lazy"/>
+            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/10 to-transparent"></div>
+            <div class="absolute top-2.5 left-2.5"><span class="bg-emerald-500 text-[10px] font-bold px-2.5 py-1 rounded-full tracking-wider">NEW</span></div>
+            <div class="absolute top-2.5 right-2.5 flex items-center gap-1 bg-black/50 backdrop-blur-sm rounded-full px-2 py-0.5">
+              <i data-lucide="star" class="w-3 h-3 text-yellow-400 fill-yellow-400"></i>
+              <span class="text-[11px] font-semibold">8.3</span>
+            </div>
+            <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-300">
+              <div class="w-12 h-12 rounded-full bg-white/20 backdrop-blur-md flex items-center justify-center scale-75 group-hover:scale-100 transition-transform duration-300">
+                <i data-lucide="play" class="w-5 h-5 text-white fill-white ml-0.5"></i>
+              </div>
+            </div>
+          </div>
+          <h3 class="text-sm font-semibold truncate">Kaiju No. 8</h3>
+          <p class="text-xs text-zinc-500 mt-0.5">Action &bull; 12 Episodes</p>
+        </div>
+
+        <!-- New Card 4 -->
+        <div class="stagger flex-shrink-0 w-[170px] md:w-[190px] group cursor-pointer" style="--i:3">
+          <div class="card-shine relative aspect-[2/3] rounded-xl overflow-hidden mb-3 bg-zinc-900">
+            <img src="https://picsum.photos/seed/blue-lock-bl2/380/570.jpg" alt="Blue Lock" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" loading="lazy"/>
+            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/10 to-transparent"></div>
+            <div class="absolute top-2.5 left-2.5"><span class="bg-emerald-500 text-[10px] font-bold px-2.5 py-1 rounded-full tracking-wider">NEW</span></div>
+            <div class="absolute top-2.5 right-2.5 flex items-center gap-1 bg-black/50 backdrop-blur-sm rounded-full px-2 py-0.5">
+              <i data-lucide="star" class="w-3 h-3 text-yellow-400 fill-yellow-400"></i>
+              <span class="text-[11px] font-semibold">8.5</span>
+            </div>
+            <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-300">
+              <div class="w-12 h-12 rounded-full bg-white/20 backdrop-blur-md flex items-center justify-center scale-75 group-hover:scale-100 transition-transform duration-300">
+                <i data-lucide="play" class="w-5 h-5 text-white fill-white ml-0.5"></i>
+              </div>
+            </div>
+          </div>
+          <h3 class="text-sm font-semibold truncate">Blue Lock S2</h3>
+          <p class="text-xs text-zinc-500 mt-0.5">Sports &bull; 14 Episodes</p>
+        </div>
+
+        <!-- New Card 5 -->
+        <div class="stagger flex-shrink-0 w-[170px] md:w-[190px] group cursor-pointer" style="--i:4">
+          <div class="card-shine relative aspect-[2/3] rounded-xl overflow-hidden mb-3 bg-zinc-900">
+            <img src="https://picsum.photos/seed/wind-breaker-wb/380/570.jpg" alt="Wind Breaker" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" loading="lazy"/>
+            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/10 to-transparent"></div>
+            <div class="absolute top-2.5 right-2.5 flex items-center gap-1 bg-black/50 backdrop-blur-sm rounded-full px-2 py-0.5">
+              <i data-lucide="star" class="w-3 h-3 text-yellow-400 fill-yellow-400"></i>
+              <span class="text-[11px] font-semibold">8.2</span>
+            </div>
+            <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-300">
+              <div class="w-12 h-12 rounded-full bg-white/20 backdrop-blur-md flex items-center justify-center scale-75 group-hover:scale-100 transition-transform duration-300">
+                <i data-lucide="play" class="w-5 h-5 text-white fill-white ml-0.5"></i>
+              </div>
+            </div>
+          </div>
+          <h3 class="text-sm font-semibold truncate">Wind Breaker</h3>
+          <p class="text-xs text-zinc-500 mt-0.5">Action &bull; 13 Episodes</p>
+        </div>
+
+        <!-- New Card 6 -->
+        <div class="stagger flex-shrink-0 w-[170px] md:w-[190px] group cursor-pointer" style="--i:5">
+          <div class="card-shine relative aspect-[2/3] rounded-xl overflow-hidden mb-3 bg-zinc-900">
+            <img src="https://picsum.photos/seed/konosuba-s3/380/570.jpg" alt="Konosuba" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" loading="lazy"/>
+            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/10 to-transparent"></div>
+            <div class="absolute top-2.5 left-2.5"><span class="bg-emerald-500 text-[10px] font-bold px-2.5 py-1 rounded-full tracking-wider">NEW</span></div>
+            <div class="absolute top-2.5 right-2.5 flex items-center gap-1 bg-black/50 backdrop-blur-sm rounded-full px-2 py-0.5">
+              <i data-lucide="star" class="w-3 h-3 text-yellow-400 fill-yellow-400"></i>
+              <span class="text-[11px] font-semibold">8.1</span>
+            </div>
+            <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-300">
+              <div class="w-12 h-12 rounded-full bg-white/20 backdrop-blur-md flex items-center justify-center scale-75 group-hover:scale-100 transition-transform duration-300">
+                <i data-lucide="play" class="w-5 h-5 text-white fill-white ml-0.5"></i>
+              </div>
+            </div>
+          </div>
+          <h3 class="text-sm font-semibold truncate">Konosuba S3</h3>
+          <p class="text-xs text-zinc-500 mt-0.5">Comedy &bull; 11 Episodes</p>
+        </div>
+
+        <!-- New Card 7 -->
+        <div class="stagger flex-shrink-0 w-[170px] md:w-[190px] group cursor-pointer" style="--i:6">
+          <div class="card-shine relative aspect-[2/3] rounded-xl overflow-hidden mb-3 bg-zinc-900">
+            <img src="https://picsum.photos/seed/mushoku-tensei-mt/380/570.jpg" alt="Mushoku Tensei" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" loading="lazy"/>
+            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/10 to-transparent"></div>
+            <div class="absolute top-2.5 left-2.5"><span class="bg-emerald-500 text-[10px] font-bold px-2.5 py-1 rounded-full tracking-wider">NEW</span></div>
+            <div class="absolute top-2.5 right-2.5 flex items-center gap-1 bg-black/50 backdrop-blur-sm rounded-full px-2 py-0.5">
+              <i data-lucide="star" class="w-3 h-3 text-yellow-400 fill-yellow-400"></i>
+              <span class="text-[11px] font-semibold">8.9</span>
+            </div>
+            <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-300">
+              <div class="w-12 h-12 rounded-full bg-white/20 backdrop-blur-md flex items-center justify-center scale-75 group-hover:scale-100 transition-transform duration-300">
+                <i data-lucide="play" class="w-5 h-5 text-white fill-white ml-0.5"></i>
+              </div>
+            </div>
+          </div>
+          <h3 class="text-sm font-semibold truncate">Mushoku Tensei S2</h3>
+          <p class="text-xs text-zinc-500 mt-0.5">Fantasy &bull; 25 Episodes</p>
+        </div>
+
+        <!-- New Card 8 -->
+        <div class="stagger flex-shrink-0 w-[170px] md:w-[190px] group cursor-pointer" style="--i:7">
+          <div class="card-shine relative aspect-[2/3] rounded-xl overflow-hidden mb-3 bg-zinc-900">
+            <img src="https://picsum.photos/seed/rezero-s3-rz/380/570.jpg" alt="Re:Zero" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" loading="lazy"/>
+            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/10 to-transparent"></div>
+            <div class="absolute top-2.5 left-2.5"><span class="bg-emerald-500 text-[10px] font-bold px-2.5 py-1 rounded-full tracking-wider">NEW</span></div>
+            <div class="absolute top-2.5 right-2.5 flex items-center gap-1 bg-black/50 backdrop-blur-sm rounded-full px-2 py-0.5">
+              <i data-lucide="star" class="w-3 h-3 text-yellow-400 fill-yellow-400"></i>
+              <span class="text-[11px] font-semibold">8.4</span>
+            </div>
+            <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-300">
+              <div class="w-12 h-12 rounded-full bg-white/20 backdrop-blur-md flex items-center justify-center scale-75 group-hover:scale-100 transition-transform duration-300">
+                <i data-lucide="play" class="w-5 h-5 text-white fill-white ml-0.5"></i>
+              </div>
+            </div>
+          </div>
+          <h3 class="text-sm font-semibold truncate">Re:Zero S3</h3>
+          <p class="text-xs text-zinc-500 mt-0.5">Fantasy &bull; 16 Episodes</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== BROWSE BY GENRE ===== -->
+  <section id="genres" class="relative py-20 md:py-28">
+    <div class="absolute top-0 left-1/2 -translate-x-1/2 w-[80%] h-px bg-gradient-to-r from-transparent via-white/5 to-transparent"></div>
+
+    <div class="max-w-7xl mx-auto px-6 md:px-12">
+      <div class="reveal text-center mb-14">
+        <span class="text-xs font-semibold tracking-[0.25em] uppercase text-amber-400 mb-2 block">Find Your Vibe</span>
+        <h2 class="font-display text-4xl md:text-5xl tracking-wider">Browse by Genre</h2>
+      </div>
+
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-5">
+
+        <!-- Action -->
+        <a href="#" class="reveal stagger group relative overflow-hidden rounded-2xl aspect-[4/3] flex flex-col items-center justify-end p-5 transition-all duration-500 hover:scale-[1.03] hover:shadow-2xl" style="--i:0">
+          <div class="absolute inset-0 bg-gradient-to-br from-red-600 to-red-900"></div>
+          <div class="absolute inset-0 genre-pattern"></div>
+          <div class="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors duration-500"></div>
+          <i data-lucide="flame" class="w-8 h-8 mb-2.5 relative z-10 text-white/80 group-hover:scale-110 transition-transform duration-300"></i>
+          <span class="text-base font-bold relative z-10">Action</span>
+          <span class="text-[11px] text-white/50 relative z-10 mt-1">120+ Titles</span>
+        </a>
+
+        <!-- Adventure -->
+        <a href="#" class="reveal stagger group relative overflow-hidden rounded-2xl aspect-[4/3] flex flex-col items-center justify-end p-5 transition-all duration-500 hover:scale-[1.03] hover:shadow-2xl" style="--i:1">
+          <div class="absolute inset-0 bg-gradient-to-br from-orange-500 to-orange-800"></div>
+          <div class="absolute inset-0 genre-pattern"></div>
+          <div class="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors duration-500"></div>
+          <i data-lucide="compass" class="w-8 h-8 mb-2.5 relative z-10 text-white/80 group-hover:scale-110 transition-transform duration-300"></i>
+          <span class="text-base font-bold relative z-10">Adventure</span>
+          <span class="text-[11px] text-white/50 relative z-10 mt-1">85+ Titles</span>
+        </a>
+
+        <!-- Romance -->
+        <a href="#" class="reveal stagger group relative overflow-hidden rounded-2xl aspect-[4/3] flex flex-col items-center justify-end p-5 transition-all duration-500 hover:scale-[1.03] hover:shadow-2xl" style="--i:2">
+          <div class="absolute inset-0 bg-gradient-to-br from-pink-500 to-pink-800"></div>
+          <div class="absolute inset-0 genre-pattern"></div>
+          <div class="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors duration-500"></div>
+          <i data-lucide="heart" class="w-8 h-8 mb-2.5 relative z-10 text-white/80 group-hover:scale-110 transition-transform duration-300"></i>
+          <span class="text-base font-bold relative z-10">Romance</span>
+          <span class="text-[11px] text-white/50 relative z-10 mt-1">95+ Titles</span>
+        </a>
+
+        <!-- Comedy -->
+        <a href="#" class="reveal stagger group relative overflow-hidden rounded-2xl aspect-[4/3] flex flex-col items-center justify-end p-5 transition-all duration-500 hover:scale-[1.03] hover:shadow-2xl" style="--i:3">
+          <div class="absolute inset-0 bg-gradient-to-br from-yellow-500 to-amber-700"></div>
+          <div class="absolute inset-0 genre-pattern"></div>
+          <div class="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors duration-500"></div>
+          <i data-lucide="smile" class="w-8 h-8 mb-2.5 relative z-10 text-white/80 group-hover:scale-110 transition-transform duration-300"></i>
+          <span class="text-base font-bold relative z-10">Comedy</span>
+          <span class="text-[11px] text-white/50 relative z-10 mt-1">110+ Titles</span>
+        </a>
+
+        <!-- Fantasy -->
+        <a href="#" class="reveal stagger group relative overflow-hidden rounded-2xl aspect-[4/3] flex flex-col items-center justify-end p-5 transition-all duration-500 hover:scale-[1.03] hover:shadow-2xl" style="--i:4">
+          <div class="absolute inset-0 bg-gradient-to-br from-purple-600 to-purple-900"></div>
+          <div class="absolute inset-0 genre-pattern"></div>
+          <div class="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors duration-500"></div>
+          <i data-lucide="sparkles" class="w-8 h-8 mb-2.5 relative z-10 text-white/80 group-hover:scale-110 transition-transform duration-300"></i>
+          <span class="text-base font-bold relative z-10">Fantasy</span>
+          <span class="text-[11px] text-white/50 relative z-10 mt-1">130+ Titles</span>
+        </a>
+
+        <!-- Horror -->
+        <a href="#" class="reveal stagger group relative overflow-hidden rounded-2xl aspect-[4/3] flex flex-col items-center justify-end p-5 transition-all duration-500 hover:scale-[1.03] hover:shadow-2xl" style="--i:5">
+          <div class="absolute inset-0 bg-gradient-to-br from-red-900 via-gray-900 to-black"></div>
+          <div class="absolute inset-0 genre-pattern"></div>
+          <div class="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors duration-500"></div>
+          <i data-lucide="skull" class="w-8 h-8 mb-2.5 relative z-10 text-white/80 group-hover:scale-110 transition-transform duration-300"></i>
+          <span class="text-base font-bold relative z-10">Horror</span>
+          <span class="text-[11px] text-white/50 relative z-10 mt-1">45+ Titles</span>
+        </a>
+
+        <!-- Sci-Fi -->
+        <a href="#" class="reveal stagger group relative overflow-hidden rounded-2xl aspect-[4/3] flex flex-col items-center justify-end p-5 transition-all duration-500 hover:scale-[1.03] hover:shadow-2xl" style="--i:6">
+          <div class="absolute inset-0 bg-gradient-to-br from-blue-600 to-blue-900"></div>
+          <div class="absolute inset-0 genre-pattern"></div>
+          <div class="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors duration-500"></div>
+          <i data-lucide="rocket" class="w-8 h-8 mb-2.5 relative z-10 text-white/80 group-hover:scale-110 transition-transform duration-300"></i>
+          <span class="text-base font-bold relative z-10">Sci-Fi</span>
+          <span class="text-[11px] text-white/50 relative z-10 mt-1">60+ Titles</span>
+        </a>
+
+        <!-- Slice of Life -->
+        <a href="#" class="reveal stagger group relative overflow-hidden rounded-2xl aspect-[4/3] flex flex-col items-center justify-end p-5 transition-all duration-500 hover:scale-[1.03] hover:shadow-2xl" style="--i:7">
+          <div class="absolute inset-0 bg-gradient-to-br from-emerald-500 to-green-800"></div>
+          <div class="absolute inset-0 genre-pattern"></div>
+          <div class="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors duration-500"></div>
+          <i data-lucide="coffee" class="w-8 h-8 mb-2.5 relative z-10 text-white/80 group-hover:scale-110 transition-transform duration-300"></i>
+          <span class="text-base font-bold relative z-10">Slice of Life</span>
+          <span class="text-[11px] text-white/50 relative z-10 mt-1">75+ Titles</span>
+        </a>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== TOP PICKS FOR YOU ===== -->
+  <section class="relative py-20 md:py-28">
+    <div class="absolute top-0 left-1/2 -translate-x-1/2 w-[80%] h-px bg-gradient-to-r from-transparent via-white/5 to-transparent"></div>
+
+    <div class="max-w-7xl mx-auto px-6 md:px-12">
+      <div class="reveal flex items-end justify-between mb-10">
+        <div>
+          <span class="text-xs font-semibold tracking-[0.25em] uppercase text-violet-400 mb-2 block">Curated For You</span>
+          <h2 class="font-display text-4xl md:text-5xl tracking-wider">Top Picks For You</h2>
+        </div>
+        <div class="hidden md:flex items-center gap-2">
+          <button onclick="scrollRow('picks-scroll', -1)" class="w-10 h-10 rounded-full border border-white/10 flex items-center justify-center hover:bg-white/10 transition-colors">
+            <i data-lucide="chevron-left" class="w-4 h-4"></i>
+          </button>
+          <button onclick="scrollRow('picks-scroll', 1)" class="w-10 h-10 rounded-full border border-white/10 flex items-center justify-center hover:bg-white/10 transition-colors">
+            <i data-lucide="chevron-right" class="w-4 h-4"></i>
+          </button>
+        </div>
+      </div>
+
+      <div id="picks-scroll" class="scroll-hide flex gap-5 overflow-x-auto scroll-smooth pb-4">
+
+        <div class="stagger flex-shrink-0 w-[170px] md:w-[190px] group cursor-pointer" style="--i:0">
+          <div class="card-shine relative aspect-[2/3] rounded-xl overflow-hidden mb-3 bg-zinc-900">
+            <img src="https://picsum.photos/seed/spy-x-family-sxf/380/570.jpg" alt="Spy x Family" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" loading="lazy"/>
+            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/10 to-transparent"></div>
+            <div class="absolute top-2.5 right-2.5 flex items-center gap-1 bg-black/50 backdrop-blur-sm rounded-full px-2 py-0.5">
+              <i data-lucide="star" class="w-3 h-3 text-yellow-400 fill-yellow-400"></i>
+              <span class="text-[11px] font-semibold">8.8</span>
+            </div>
+            <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-300">
+              <div class="w-12 h-12 rounded-full bg-white/20 backdrop-blur-md flex items-center justify-center scale-75 group-hover:scale-100 transition-transform duration-300">
+                <i data-lucide="play" class="w-5 h-5 text-white fill-white ml-0.5"></i>
+              </div>
+            </div>
+          </div>
+          <h3 class="text-sm font-semibold truncate">Spy x Family</h3>
+          <p class="text-xs text-zinc-500 mt-0.5">Comedy &bull; 37 Episodes</p>
+        </div>
+
+        <div class="stagger flex-shrink-0 w-[170px] md:w-[190px] group cursor-pointer" style="--i:1">
+          <div class="card-shine relative aspect-[2/3] rounded-xl overflow-hidden mb-3 bg-zinc-900">
+            <img src="https://picsum.photos/seed/mob-psycho-100-mp/380/570.jpg" alt="Mob Psycho 100" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" loading="lazy"/>
+            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/10 to-transparent"></div>
+            <div class="absolute top-2.5 right-2.5 flex items-center gap-1 bg-black/50 backdrop-blur-sm rounded-full px-2 py-0.5">
+              <i data-lucide="star" class="w-3 h-3 text-yellow-400 fill-yellow-400"></i>
+              <span class="text-[11px] font-semibold">8.9</span>
+            </div>
+            <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-300">
+              <div class="w-12 h-12 rounded-full bg-white/20 backdrop-blur-md flex items-center justify-center scale-75 group-hover:scale-100 transition-transform duration-300">
+                <i data-lucide="play" class="w-5 h-5 text-white fill-white ml-0.5"></i>
+              </div>
+            </div>
+          </div>
+          <h3 class="text-sm font-semibold truncate">Mob Psycho 100</h3>
+          <p class="text-xs text-zinc-500 mt-0.5">Action &bull; 37 Episodes</p>
+        </div>
+
+        <div class="stagger flex-shrink-0 w-[170px] md:w-[190px] group cursor-pointer" style="--i:2">
+          <div class="card-shine relative aspect-[2/3] rounded-xl overflow-hidden mb-3 bg-zinc-900">
+            <img src="https://picsum.photos/seed/vinland-saga-vs/380/570.jpg" alt="Vinland Saga" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" loading="lazy"/>
+            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/10 to-transparent"></div>
+            <div class="absolute top-2.5 right-2.5 flex items-center gap-1 bg-black/50 backdrop-blur-sm rounded-full px-2 py-0.5">
+              <i data-lucide="star" class="w-3 h-3 text-yellow-400 fill-yellow-400"></i>
+              <span class="text-[11px] font-semibold">9.0</span>
+            </div>
+            <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-300">
+              <div class="w-12 h-12 rounded-full bg-white/20 backdrop-blur-md flex items-center justify-center scale-75 group-hover:scale-100 transition-transform duration-300">
+                <i data-lucide="play" class="w-5 h-5 text-white fill-white ml-0.5"></i>
+              </div>
+            </div>
+          </div>
+          <h3 class="text-sm font-semibold truncate">Vinland Saga</h3>
+          <p class="text-xs text-zinc-500 mt-0.5">Action &bull; 48 Episodes</p>
+        </div>
+
+        <div class="stagger flex-shrink-0 w-[170px] md:w-[190px] group cursor-pointer" style="--i:3">
+          <div class="card-shine relative aspect-[2/3] rounded-xl overflow-hidden mb-3 bg-zinc-900">
+            <img src="https://picsum.photos/seed/steins-gate-sg/380/570.jpg" alt="Steins;Gate" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" loading="lazy"/>
+            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/10 to-transparent"></div>
+            <div class="absolute top-2.5 right-2.5 flex items-center gap-1 bg-black/50 backdrop-blur-sm rounded-full px-2 py-0.5">
+              <i data-lucide="star" class="w-3 h-3 text-yellow-400 fill-yellow-400"></i>
+              <span class="text-[11px] font-semibold">9.1</span>
+            </div>
+            <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-300">
+              <div class="w-12 h-12 rounded-full bg-white/20 backdrop-blur-md flex items-center justify-center scale-75 group-hover:scale-100 transition-transform duration-300">
+                <i data-lucide="play" class="w-5 h-5 text-white fill-white ml-0.5"></i>
+              </div>
+            </div>
+          </div>
+          <h3 class="text-sm font-semibold truncate">Steins;Gate</h3>
+          <p class="text-xs text-zinc-500 mt-0.5">Sci-Fi &bull; 24 Episodes</p>
+        </div>
+
+        <div class="stagger flex-shrink-0 w-[170px] md:w-[190px] group cursor-pointer" style="--i:4">
+          <div class="card-shine relative aspect-[2/3] rounded-xl overflow-hidden mb-3 bg-zinc-900">
+            <img src="https://picsum.photos/seed/hunter-x-hunter-hxh/380/570.jpg" alt="Hunter x Hunter" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" loading="lazy"/>
+            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/10 to-transparent"></div>
+            <div class="absolute top-2.5 right-2.5 flex items-center gap-1 bg-black/50 backdrop-blur-sm rounded-full px-2 py-0.5">
+              <i data-lucide="star" class="w-3 h-3 text-yellow-400 fill-yellow-400"></i>
+              <span class="text-[11px] font-semibold">9.2</span>
+            </div>
+            <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-300">
+              <div class="w-12 h-12 rounded-full bg-white/20 backdrop-blur-md flex items-center justify-center scale-75 group-hover:scale-100 transition-transform duration-300">
+                <i data-lucide="play" class="w-5 h-5 text-white fill-white ml-0.5"></i>
+              </div>
+            </div>
+          </div>
+          <h3 class="text-sm font-semibold truncate">Hunter x Hunter</h3>
+          <p class="text-xs text-zinc-500 mt-0.5">Adventure &bull; 148 Episodes</p>
+        </div>
+
+        <div class="stagger flex-shrink-0 w-[170px] md:w-[190px] group cursor-pointer" style="--i:5">
+          <div class="card-shine relative aspect-[2/3] rounded-xl overflow-hidden mb-3 bg-zinc-900">
+            <img src="https://picsum.photos/seed/fmab-fma/380/570.jpg" alt="FMA Brotherhood" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" loading="lazy"/>
+            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/10 to-transparent"></div>
+            <div class="absolute top-2.5 left-2.5"><span class="bg-amber-500 text-black text-[10px] font-bold px-2.5 py-1 rounded-full tracking-wider">MASTERPIECE</span></div>
+            <div class="absolute top-2.5 right-2.5 flex items-center gap-1 bg-black/50 backdrop-blur-sm rounded-full px-2 py-0.5">
+              <i data-lucide="star" class="w-3 h-3 text-yellow-400 fill-yellow-400"></i>
+              <span class="text-[11px] font-semibold">9.5</span>
+            </div>
+            <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-300">
+              <div class="w-12 h-12 rounded-full bg-white/20 backdrop-blur-md flex items-center justify-center scale-75 group-hover:scale-100 transition-transform duration-300">
+                <i data-lucide="play" class="w-5 h-5 text-white fill-white ml-0.5"></i>
+              </div>
+            </div>
+          </div>
+          <h3 class="text-sm font-semibold truncate">FMA: Brotherhood</h3>
+          <p class="text-xs text-zinc-500 mt-0.5">Action &bull; 64 Episodes</p>
+        </div>
+
+        <div class="stagger flex-shrink-0 w-[170px] md:w-[190px] group cursor-pointer" style="--i:6">
+          <div class="card-shine relative aspect-[2/3] rounded-xl overflow-hidden mb-3 bg-zinc-900">
+            <img src="https://picsum.photos/seed/death-note-dn/380/570.jpg" alt="Death Note" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" loading="lazy"/>
+            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/10 to-transparent"></div>
+            <div class="absolute top-2.5 right-2.5 flex items-center gap-1 bg-black/50 backdrop-blur-sm rounded-full px-2 py-0.5">
+              <i data-lucide="star" class="w-3 h-3 text-yellow-400 fill-yellow-400"></i>
+              <span class="text-[11px] font-semibold">9.0</span>
+            </div>
+            <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-300">
+              <div class="w-12 h-12 rounded-full bg-white/20 backdrop-blur-md flex items-center justify-center scale-75 group-hover:scale-100 transition-transform duration-300">
+                <i data-lucide="play" class="w-5 h-5 text-white fill-white ml-0.5"></i>
+              </div>
+            </div>
+          </div>
+          <h3 class="text-sm font-semibold truncate">Death Note</h3>
+          <p class="text-xs text-zinc-500 mt-0.5">Mystery &bull; 37 Episodes</p>
+        </div>
+
+        <div class="stagger flex-shrink-0 w-[170px] md:w-[190px] group cursor-pointer" style="--i:7">
+          <div class="card-shine relative aspect-[2/3] rounded-xl overflow-hidden mb-3 bg-zinc-900">
+            <img src="https://picsum.photos/seed/cowboy-bebop-cb/380/570.jpg" alt="Cowboy Bebop" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" loading="lazy"/>
+            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/10 to-transparent"></div>
+            <div class="absolute top-2.5 right-2.5 flex items-center gap-1 bg-black/50 backdrop-blur-sm rounded-full px-2 py-0.5">
+              <i data-lucide="star" class="w-3 h-3 text-yellow-400 fill-yellow-400"></i>
+              <span class="text-[11px] font-semibold">8.9</span>
+            </div>
+            <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-300">
+              <div class="w-12 h-12 rounded-full bg-white/20 backdrop-blur-md flex items-center justify-center scale-75 group-hover:scale-100 transition-transform duration-300">
+                <i data-lucide="play" class="w-5 h-5 text-white fill-white ml-0.5"></i>
+              </div>
+            </div>
+          </div>
+          <h3 class="text-sm font-semibold truncate">Cowboy Bebop</h3>
+          <p class="text-xs text-zinc-500 mt-0.5">Sci-Fi &bull; 26 Episodes</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CTA BANNER ===== -->
+  <section class="relative py-20 md:py-28">
+    <div class="absolute top-0 left-1/2 -translate-x-1/2 w-[80%] h-px bg-gradient-to-r from-transparent via-white/5 to-transparent"></div>
+
+    <div class="max-w-7xl mx-auto px-6 md:px-12">
+      <div class="reveal relative overflow-hidden rounded-3xl bg-gradient-to-r from-rose-600/20 via-rose-500/10 to-orange-500/20 border border-rose-500/10 p-10 md:p-16 text-center">
+        <!-- Decorative glow -->
+        <div class="absolute top-0 right-0 w-64 h-64 bg-rose-500/10 rounded-full blur-[100px]"></div>
+        <div class="absolute bottom-0 left-0 w-64 h-64 bg-orange-500/10 rounded-full blur-[100px]"></div>
+
+        <div class="relative z-10">
+          <h2 class="font-display text-4xl md:text-6xl tracking-wider mb-4">START YOUR JOURNEY</h2>
+          <p class="text-zinc-400 text-lg max-w-xl mx-auto mb-8">Join millions of anime fans. Stream unlimited titles in HD with subtitles and dubbing.</p>
+          <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+            <a href="#" class="group flex items-center gap-3 px-10 py-4 bg-rose-600 hover:bg-rose-500 rounded-full transition-all duration-300 hover:shadow-lg hover:shadow-rose-600/25">
+              <span class="text-sm font-bold tracking-wide">Create Free Account</span>
+              <i data-lucide="arrow-right" class="w-4 h-4 group-hover:translate-x-1 transition-transform"></i>
+            </a>
+            <a href="#" class="flex items-center gap-3 px-10 py-4 bg-white/5 hover:bg-white/10 border border-white/10 hover:border-white/20 rounded-full transition-all duration-300">
+              <span class="text-sm font-medium tracking-wide text-zinc-300">Learn More</span>
+            </a>
           </div>
         </div>
       </div>
+    </div>
+  </section>
 
-    
-
-    </aside>
-  </div>
-</div>
-</main>
-
-   
-  
-<!-- ========== FOOTER ========== -->
-<footer class='footer'>
-<div class='footer-main'>
-  <div class='container'>
-    <div class='footer-grid'>
-      <div class='footer-brand'>
-        <div class='footer-logo'>
-          <div class='logo-icon' style='width:34px;height:34px;font-size:14px;'><i class='fas fa-play'/></div>
-          <span style='font-size:19px;font-weight:800;color:var(--text-primary);'>Real <span style='background:var(--glossy-2);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;'>Anime</span></span>
+  <!-- ===== FOOTER ===== -->
+  <footer class="relative border-t border-white/5 pt-16 pb-8">
+    <div class="max-w-7xl mx-auto px-6 md:px-12">
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-10 mb-16">
+        <!-- Brand -->
+        <div class="col-span-2 md:col-span-1">
+          <div class="flex items-center gap-3 mb-5">
+            <div class="w-8 h-8 rounded-lg bg-rose-600 flex items-center justify-center">
+              <i data-lucide="play" class="w-3.5 h-3.5 text-white fill-white"></i>
+            </div>
+            <span class="font-display text-xl tracking-wider">ANIME SEKAI</span>
+          </div>
+          <p class="text-sm text-zinc-500 leading-relaxed mb-5">Your ultimate destination for anime streaming. Discover, watch, and believe.</p>
+          <div class="flex items-center gap-3">
+            <a href="#" class="w-9 h-9 rounded-full bg-white/5 flex items-center justify-center hover:bg-white/10 transition-colors">
+              <i data-lucide="twitter" class="w-4 h-4 text-zinc-400"></i>
+            </a>
+            <a href="#" class="w-9 h-9 rounded-full bg-white/5 flex items-center justify-center hover:bg-white/10 transition-colors">
+              <i data-lucide="instagram" class="w-4 h-4 text-zinc-400"></i>
+            </a>
+            <a href="#" class="w-9 h-9 rounded-full bg-white/5 flex items-center justify-center hover:bg-white/10 transition-colors">
+              <i data-lucide="youtube" class="w-4 h-4 text-zinc-400"></i>
+            </a>
+            <a href="#" class="w-9 h-9 rounded-full bg-white/5 flex items-center justify-center hover:bg-white/10 transition-colors">
+              <i data-lucide="message-circle" class="w-4 h-4 text-zinc-400"></i>
+            </a>
+          </div>
         </div>
-        <p>Real Anime is your ultimate destination for streaming anime series and movies online. Watch in HD and 4K quality with fast servers, updated daily with the latest episodes.</p>
-        <div class='footer-social'>
-          <a href='#' title='Facebook'><i class='fab fa-facebook-f'/></a>
-          <a href='#' title='Twitter'><i class='fab fa-twitter'/></a>
-          <a href='#' title='Instagram'><i class='fab fa-instagram'/></a>
-          <a href='#' title='YouTube'><i class='fab fa-youtube'/></a>
-          <a href='#' title='Discord'><i class='fab fa-discord'/></a>
-          <a href='#' title='Telegram'><i class='fab fa-telegram-plane'/></a>
+
+        <!-- Browse -->
+        <div>
+          <h4 class="text-xs font-semibold tracking-[0.2em] uppercase text-zinc-400 mb-5">Browse</h4>
+          <ul class="space-y-3">
+            <li><a href="#" class="text-sm text-zinc-500 hover:text-white transition-colors">Trending</a></li>
+            <li><a href="#" class="text-sm text-zinc-500 hover:text-white transition-colors">New Releases</a></li>
+            <li><a href="#" class="text-sm text-zinc-500 hover:text-white transition-colors">Top Rated</a></li>
+            <li><a href="#" class="text-sm text-zinc-500 hover:text-white transition-colors">Genres</a></li>
+            <li><a href="#" class="text-sm text-zinc-500 hover:text-white transition-colors">Random</a></li>
+          </ul>
+        </div>
+
+        <!-- Company -->
+        <div>
+          <h4 class="text-xs font-semibold tracking-[0.2em] uppercase text-zinc-400 mb-5">Company</h4>
+          <ul class="space-y-3">
+            <li><a href="#" class="text-sm text-zinc-500 hover:text-white transition-colors">About Us</a></li>
+            <li><a href="#" class="text-sm text-zinc-500 hover:text-white transition-colors">Careers</a></li>
+            <li><a href="#" class="text-sm text-zinc-500 hover:text-white transition-colors">Press</a></li>
+            <li><a href="#" class="text-sm text-zinc-500 hover:text-white transition-colors">Contact</a></li>
+          </ul>
+        </div>
+
+        <!-- Legal -->
+        <div>
+          <h4 class="text-xs font-semibold tracking-[0.2em] uppercase text-zinc-400 mb-5">Legal</h4>
+          <ul class="space-y-3">
+            <li><a href="#" class="text-sm text-zinc-500 hover:text-white transition-colors">Terms of Service</a></li>
+            <li><a href="#" class="text-sm text-zinc-500 hover:text-white transition-colors">Privacy Policy</a></li>
+            <li><a href="#" class="text-sm text-zinc-500 hover:text-white transition-colors">Cookie Policy</a></li>
+            <li><a href="#" class="text-sm text-zinc-500 hover:text-white transition-colors">DMCA</a></li>
+          </ul>
         </div>
       </div>
-      <div class='footer-column'>
-        <h4>Quick Links</h4>
-        <div class='footer-links'>
-          <a expr:href='data:blog.homepageUrl'><i class='fas fa-chevron-right' style='font-size:9px;'/> Home</a>
-          <a href='/search/label/Anime'><i class='fas fa-chevron-right' style='font-size:9px;'/> Anime List</a>
-          <a href='/search/label/ongoing'><i class='fas fa-chevron-right' style='font-size:9px;'/> Ongoing</a>
-          <a href='/search/label/completed'><i class='fas fa-chevron-right' style='font-size:9px;'/> Completed</a>
-          <a href='/search/label/movie'><i class='fas fa-chevron-right' style='font-size:9px;'/> Movies</a>
-        </div>
-      </div>
-      <div class='footer-column'>
-        <h4>Top Genres</h4>
-        <div class='footer-links'>
-          <a href='/search/label/Action'><i class='fas fa-chevron-right' style='font-size:9px;'/> Action</a>
-          <a href='/search/label/romance'><i class='fas fa-chevron-right' style='font-size:9px;'/> Romance</a>
-          <a href='/search/label/fantasy'><i class='fas fa-chevron-right' style='font-size:9px;'/> Fantasy</a>
-          <a href='/search/label/Isekai'><i class='fas fa-chevron-right' style='font-size:9px;'/> Isekai</a>
-          <a href='/search/label/SCI-FI'><i class='fas fa-chevron-right' style='font-size:9px;'/> Sci-Fi</a>
-          <a href='/search/label/thriller'><i class='fas fa-chevron-right' style='font-size:9px;'/> Thriller</a>
-        </div>
-      </div>
-      <div class='footer-column'>
-        <h4>Information</h4>
-        <div class='footer-links'>
-          <a href='/p/about.html'><i class='fas fa-chevron-right' style='font-size:9px;'/> About Us</a>
-          <a href='/p/contact.html'><i class='fas fa-chevron-right' style='font-size:9px;'/> Contact</a>
-          <a href='/p/request.html'><i class='fas fa-chevron-right' style='font-size:9px;'/> Request Anime</a>
-          <a href='/p/dmca.html'><i class='fas fa-chevron-right' style='font-size:9px;'/> DMCA</a>
-          <a href='/p/privacy.html'><i class='fas fa-chevron-right' style='font-size:9px;'/> Privacy Policy</a>
-          <a href='/p/terms.html'><i class='fas fa-chevron-right' style='font-size:9px;'/> Terms of Service</a>
-        </div>
+
+      <!-- Bottom bar -->
+      <div class="border-t border-white/5 pt-8 flex flex-col md:flex-row items-center justify-between gap-4">
+        <p class="text-xs text-zinc-600">&copy; 2025 Anime Sekai. All rights reserved.</p>
+        <p class="text-xs text-zinc-700">Made with <span class="text-rose-500">♥</span> for anime fans worldwide</p>
       </div>
     </div>
-  </div>
-</div>
-<div class='footer-bottom'>
-  <div class='container'>
-    <div class='footer-bottom-inner'>
-      <p>&#169; 2025 <span>Real Anime</span>. All rights reserved. Made for anime lovers.</p>
-      <div class='footer-bottom-links'>
-        <a href='/p/dmca.html'>DMCA</a>
-        <a href='/p/privacy.html'>Privacy</a>
-        <a href='/p/terms.html'>Terms</a>
-      </div>
-    </div>
-  </div>
-</div>
-</footer>
+  </footer>
 
-<!-- BACK TO TOP -->
-<button class='back-to-top' id='backToTop' title='Back to Top' type='button'><i class='fas fa-arrow-up'/></button>
+  <!-- ===== JAVASCRIPT ===== -->
+  <script>
+    // Initialize Lucide icons
+    lucide.createIcons();
 
-<!-- ========== JAVASCRIPT (Lightweight, No Lag) ========== -->
-<script>
-//<![CDATA[
-
-// ===== TOAST =====
-function showToast(msg, type) {
-  type = type || 'info';
-  var c = document.getElementById('toastContainer');
-  if (!c) return;
-  var ic = { success: 'fas fa-check-circle', info: 'fas fa-info-circle' };
-  var t = document.createElement('div');
-  t.className = 'toast ' + type;
-  t.innerHTML = '<i class="' + (ic[type] || ic.info) + '"></i><span>' + msg + '</span>';
-  c.appendChild(t);
-  setTimeout(function() { t.classList.add('show'); }, 30);
-  setTimeout(function() { t.classList.remove('show'); setTimeout(function() { t.remove(); }, 350); }, 2500);
-}
-
-// ===== COPY LINK =====
-document.addEventListener('click', function(e) {
-  var btn = e.target.closest('.copy-link');
-  if (btn) {
-    var url = btn.getAttribute('data-url');
-    if (navigator.clipboard && url) {
-      navigator.clipboard.writeText(url).then(function() {
-        showToast('Link copied!', 'success');
-      });
+    // ---- Cherry Blossom Petals ----
+    const petalsContainer = document.getElementById('petals-container');
+    for (let i = 0; i < 25; i++) {
+      const petal = document.createElement('div');
+      petal.className = 'petal';
+      const size = Math.random() * 8 + 5;
+      petal.style.cssText = `
+        left: ${Math.random() * 100 + 10}%;
+        width: ${size}px;
+        height: ${size}px;
+        animation-duration: ${Math.random() * 6 + 9}s;
+        animation-delay: ${Math.random() * 12}s;
+        opacity: ${Math.random() * 0.5 + 0.15};
+        filter: blur(${Math.random() < 0.3 ? '1px' : '0'});
+      `;
+      petalsContainer.appendChild(petal);
     }
-  }
-});
 
-// ===== MOBILE MENU =====
-var mobileToggle = document.getElementById('mobileToggle');
-var navMenu = document.getElementById('navMenu');
-var menuIcon = document.getElementById('menuIcon');
-if (mobileToggle && navMenu) {
-  mobileToggle.addEventListener('click', function() {
-    navMenu.classList.toggle('active');
-    if (menuIcon) menuIcon.className = navMenu.classList.contains('active') ? 'fas fa-times' : 'fas fa-bars';
-  });
-}
-
-// ===== SEARCH OVERLAY =====
-var searchToggle = document.getElementById('searchToggle');
-var searchOverlay = document.getElementById('searchOverlay');
-var searchClose = document.getElementById('searchClose');
-if (searchToggle && searchOverlay) {
-  searchToggle.addEventListener('click', function() {
-    searchOverlay.classList.add('active');
-    setTimeout(function() { var i = searchOverlay.querySelector('input'); if(i) i.focus(); }, 80);
-  });
-}
-if (searchClose && searchOverlay) {
-  searchClose.addEventListener('click', function() { searchOverlay.classList.remove('active'); });
-  searchOverlay.addEventListener('click', function(e) { if (e.target === searchOverlay) searchOverlay.classList.remove('active'); });
-}
-document.addEventListener('keydown', function(e) {
-  if (e.key === 'Escape' && searchOverlay && searchOverlay.classList.contains('active')) searchOverlay.classList.remove('active');
-  if ((e.ctrlKey || e.metaKey) && e.key === 'k') { e.preventDefault(); if(searchOverlay) searchOverlay.classList.add('active'); }
-});
-
-// ===== HEADER SCROLL =====
-var header = document.getElementById('headerWrapper');
-if (header) {
-  window.addEventListener('scroll', function() {
-    header.classList.toggle('scrolled', window.scrollY > 40);
-  }, { passive: true });
-}
-
-// ===== READING PROGRESS =====
-var progressBar = document.getElementById('readingProgress');
-if (progressBar) {
-  window.addEventListener('scroll', function() {
-    var s = document.documentElement.scrollTop || document.body.scrollTop;
-    var h = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-    progressBar.style.width = h > 0 ? ((s / h) * 100) + '%' : '0%';
-  }, { passive: true });
-}
-
-// ===== BACK TO TOP =====
-var backToTop = document.getElementById('backToTop');
-if (backToTop) {
-  window.addEventListener('scroll', function() {
-    backToTop.classList.toggle('visible', window.scrollY > 350);
-  }, { passive: true });
-  backToTop.addEventListener('click', function() { window.scrollTo({ top: 0, behavior: 'smooth' }); });
-}
-
-// ===== FEATURED SLIDER (8 Slides, Auto-play) =====
-var slider = document.getElementById('featuredSlider');
-if (slider) {
-  var slides = slider.querySelectorAll('.featured-slide');
-  var dots = slider.querySelectorAll('.featured-dot');
-  var prevBtn = document.getElementById('sliderPrev');
-  var nextBtn = document.getElementById('sliderNext');
-  var current = 0;
-  var interval;
-
-  function goTo(n) {
-    slides[current].classList.remove('active');
-    if (dots[current]) dots[current].classList.remove('active');
-    current = (n + slides.length) % slides.length;
-    slides[current].classList.add('active');
-    if (dots[current]) dots[current].classList.add('active');
-  }
-
-  function startAuto() { interval = setInterval(function() { goTo(current + 1); }, 4500); }
-  function stopAuto() { clearInterval(interval); }
-
-  // Dot clicks
-  dots.forEach(function(dot) {
-    dot.addEventListener('click', function() {
-      stopAuto();
-      goTo(parseInt(this.getAttribute('data-slide')));
-      startAuto();
+    // ---- Navbar scroll effect ----
+    const navbar = document.getElementById('navbar');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 60) {
+        navbar.style.backgroundColor = 'rgba(10, 10, 18, 0.85)';
+        navbar.style.backdropFilter = 'blur(20px)';
+        navbar.style.WebkitBackdropFilter = 'blur(20px)';
+        navbar.style.borderBottom = '1px solid rgba(255,255,255,0.05)';
+      } else {
+        navbar.style.backgroundColor = 'transparent';
+        navbar.style.backdropFilter = 'none';
+        navbar.style.WebkitBackdropFilter = 'none';
+        navbar.style.borderBottom = 'none';
+      }
     });
-  });
 
-  // Arrow clicks
-  if (prevBtn) {
-    prevBtn.addEventListener('click', function() { stopAuto(); goTo(current - 1); startAuto(); });
-  }
-  if (nextBtn) {
-    nextBtn.addEventListener('click', function() { stopAuto(); goTo(current + 1); startAuto(); });
-  }
-
-  // Touch/swipe support (lightweight)
-  var touchStartX = 0;
-  slider.addEventListener('touchstart', function(e) {
-    touchStartX = e.changedTouches[0].screenX;
-    stopAuto();
-  }, { passive: true });
-  slider.addEventListener('touchend', function(e) {
-    var diff = touchStartX - e.changedTouches[0].screenX;
-    if (Math.abs(diff) > 50) {
-      goTo(diff > 0 ? current + 1 : current - 1);
+    // ---- Horizontal scroll arrows ----
+    function scrollRow(id, direction) {
+      const container = document.getElementById(id);
+      const amount = container.clientWidth * 0.75;
+      container.scrollBy({ left: direction * amount, behavior: 'smooth' });
     }
-    startAuto();
-  }, { passive: true });
 
-  startAuto();
-}
+    // ---- Search overlay ----
+    const searchBtn = document.getElementById('searchBtn');
+    const searchOverlay = document.getElementById('searchOverlay');
+    const closeSearch = document.getElementById('closeSearch');
+    const searchInput = document.getElementById('searchInput');
 
-// ===== ACTIVE GENRE CHIP =====
-var currentUrl = window.location.href;
-document.querySelectorAll('.genre-chip').forEach(function(chip) {
-  chip.classList.remove('active');
-  var href = chip.getAttribute('href');
-  if (href === '/') {
-    if (currentUrl === window.location.origin + '/' || currentUrl === window.location.origin) {
-      chip.classList.add('active');
-    }
-  } else if (currentUrl.indexOf(href) !== -1) {
-    chip.classList.add('active');
-  }
-});
+    searchBtn.addEventListener('click', () => {
+      searchOverlay.classList.add('active');
+      setTimeout(() => searchInput.focus(), 100);
+    });
 
-//]]>
-</script>
+    closeSearch.addEventListener('click', () => {
+      searchOverlay.classList.remove('active');
+      searchInput.value = '';
+    });
+
+    searchOverlay.addEventListener('click', (e) => {
+      if (e.target === searchOverlay) {
+        searchOverlay.classList.remove('active');
+        searchInput.value = '';
+      }
+    });
+
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && searchOverlay.classList.contains('active')) {
+        searchOverlay.classList.remove('active');
+        searchInput.value = '';
+      }
+      // Ctrl+K or Cmd+K to open search
+      if ((e.ctrlKey || e.metaKey) && e.key === 'k') {
+        e.preventDefault();
+        searchOverlay.classList.add('active');
+        setTimeout(() => searchInput.focus(), 100);
+      }
+    });
+
+    // ---- Mobile menu ----
+    const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+    mobileMenuBtn.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+
+    // ---- Scroll reveal (Intersection Observer) ----
+    const revealObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          // Don't unobserve so we can re-trigger if needed, but for performance:
+          // revealObserver.unobserve(entry.target);
+        }
+      });
+    }, {
+      threshold: 0.1,
+      rootMargin: '0px 0px -50px 0px'
+    });
+
+    document.querySelectorAll('.reveal').forEach(el => {
+      revealObserver.observe(el);
+    });
+
+    // ---- Stagger animation for cards inside revealed sections ----
+    const staggerObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const parent = entry.target.closest('.reveal');
+          if (parent && parent.classList.contains('visible')) {
+            entry.target.style.opacity = '1';
+            entry.target.style.transform = 'translateY(0)';
+          }
+        }
+      });
+    }, { threshold: 0.1 });
+
+    document.querySelectorAll('.stagger').forEach(el => {
+      el.style.opacity = '0';
+      el.style.transform = 'translateY(20px)';
+      el.style.transition = `opacity 0.6s ease ${el.style.getPropertyValue('--i') * 0.08}s, transform 0.6s ease ${el.style.getPropertyValue('--i') * 0.08}s`;
+      staggerObserver.observe(el);
+    });
+
+    // ---- Touch swipe support for scroll rows (enhanced) ----
+    document.querySelectorAll('.scroll-hide').forEach(container => {
+      let isDown = false;
+      let startX;
+      let scrollLeft;
+
+      container.addEventListener('mousedown', (e) => {
+        isDown = true;
+        startX = e.pageX - container.offsetLeft;
+        scrollLeft = container.scrollLeft;
+        container.style.cursor = 'grabbing';
+      });
+
+      container.addEventListener('mouseleave', () => {
+        isDown = false;
+        container.style.cursor = 'grab';
+      });
+
+      container.addEventListener('mouseup', () => {
+        isDown = false;
+        container.style.cursor = 'grab';
+      });
+
+      container.addEventListener('mousemove', (e) => {
+        if (!isDown) return;
+        e.preventDefault();
+        const x = e.pageX - container.offsetLeft;
+        const walk = (x - startX) * 1.5;
+        container.scrollLeft = scrollLeft - walk;
+      });
+
+      container.style.cursor = 'grab';
+    });
+  </script>
 
 </body>
 </html>
