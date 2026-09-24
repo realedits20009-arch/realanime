@@ -1,0 +1,95 @@
+@import "tailwindcss";
+
+:root {
+  --background: #0b0a08;
+  --surface: #141210;
+  --card: #1a1714;
+  --border: #2b2620;
+  --foreground: #f5f1e8;
+  --muted-foreground: #a39b8c;
+  --gold: #fbbf24;
+  --gold-light: #fde68a;
+  --gold-dark: #b45309;
+  --radius: 0.75rem;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-surface: var(--surface);
+  --color-card: var(--card);
+  --color-border: var(--border);
+  --color-foreground: var(--foreground);
+  --color-muted: var(--muted-foreground);
+  --color-gold: var(--gold);
+  --color-gold-light: var(--gold-light);
+  --color-gold-dark: var(--gold-dark);
+}
+
+* {
+  border-color: var(--border);
+}
+
+html {
+  color-scheme: dark;
+}
+
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+  font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+.text-gold {
+  color: var(--gold);
+}
+.bg-gold {
+  background-color: var(--gold);
+}
+.gold-gradient-text {
+  background-image: linear-gradient(100deg, var(--gold-light), var(--gold));
+  background-clip: text;
+  color: transparent;
+}
+.gold-gradient-bg {
+  background-image: linear-gradient(100deg, var(--gold), var(--gold-dark));
+}
+.gold-glow {
+  box-shadow: 0 0 0 1px rgba(251, 191, 36, 0.35), 0 8px 30px -12px rgba(251, 191, 36, 0.35);
+}
+.gold-glow-strong {
+  box-shadow: 0 0 0 1px rgba(251, 191, 36, 0.6), 0 12px 40px -10px rgba(251, 191, 36, 0.55);
+}
+
+.scrollbar-hide {
+  scrollbar-width: none;
+}
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+.scrollbar-gold {
+  scrollbar-width: thin;
+  scrollbar-color: var(--gold-dark) transparent;
+}
+.scrollbar-gold::-webkit-scrollbar {
+  width: 8px;
+}
+.scrollbar-gold::-webkit-scrollbar-thumb {
+  background: var(--gold-dark);
+  border-radius: 999px;
+}
+
+@keyframes fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+.animate-fade-up {
+  animation: fade-up 0.35s ease-out both;
+}
